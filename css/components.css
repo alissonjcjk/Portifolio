@@ -587,3 +587,84 @@
 body {
   transition: opacity 0.2s ease;
 }
+
+/* --- Scroll Progress Bar --- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-secondary), #a78bfa);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* --- Theme Toggle Button --- */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  background-color: rgba(99, 102, 241, 0.06);
+  transform: rotate(20deg);
+}
+
+/* --- Selection Color --- */
+::selection {
+  background-color: rgba(99, 102, 241, 0.25);
+  color: var(--text-primary);
+}
+
+/* --- Scrollbar Styling --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* --- Focus Ring --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- Print Styles --- */
+@media print {
+  .sidebar, #scroll-progress, .theme-toggle-btn, .lang-toggle-btn { display: none !important; }
+  .main-content { overflow: visible !important; }
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

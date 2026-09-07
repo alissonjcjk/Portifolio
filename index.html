@@ -6,13 +6,24 @@
   <title>Alisson Bernardino | Full Stack Java & Angular Developer</title>
   
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="Portfolio of Alisson Bernardino, Full Stack Developer specializing in Java, Spring Boot, and Angular. Based in Recife, PE.">
-  <meta name="keywords" content="Alisson Bernardino, Full Stack Developer, Java, Angular, Spring Boot, React, Software Engineer, Portfolio">
+  <meta name="description" content="Portfolio de Alisson Bernardino, Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular. Baseado em Recife, PE. Portfolio of Alisson Bernardino, Full Stack Developer specializing in Java, Spring Boot, and Angular.">
+  <meta name="keywords" content="Alisson Bernardino, Full Stack Developer, Java, Angular, Spring Boot, Docker, Kubernetes, AWS, Kafka, Portfolio, Recife, UFPE">
+  <meta name="author" content="Alisson Bernardino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alissonjcjk.github.io/Portifolio/">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Alisson Bernardino | Full Stack Developer">
-  <meta property="og:description" content="Full Stack Developer specializing in Java, Spring Boot, and Angular.">
+  <meta property="og:description" content="Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular. Full Stack Developer specializing in Java, Spring Boot, and Angular.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alissonjcjk.github.io/Portifolio/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Alisson Bernardino | Full Stack Developer">
+  <meta name="twitter:description" content="Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +38,8 @@
   <link rel="stylesheet" href="./css/components.css">
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
   <!-- Theme Toggle & Language Toggle will be injected or placed here -->
   
   <div class="app-container">
@@ -35,10 +48,15 @@
       <div class="profile-header">
         <div class="header-top" style="display: flex; justify-content: space-between; align-items: center;">
           <h1>Alisson Bernardino</h1>
-          <a href="#" id="lang-toggle" class="lang-toggle-btn" aria-label="Mudar idioma">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-            <span>EN</span>
-          </a>
+          <div style="display: flex; gap: var(--space-2); align-items: center;">
+            <a href="#" id="theme-toggle" class="theme-toggle-btn" aria-label="Mudar tema">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </a>
+            <a href="#" id="lang-toggle" class="lang-toggle-btn" aria-label="Mudar idioma">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              <span>EN</span>
+            </a>
+          </div>
         </div>
         <h2>Full Stack Developer</h2>
         <p data-i18n="hero.bio">Desenvolvedor Full Stack com foco em Java e Angular. Experiência na construção de aplicações escaláveis, APIs RESTful e arquitetura de microsserviços.</p>
