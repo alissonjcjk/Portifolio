@@ -85,9 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, 100);
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     });
   }, appearOptions);
@@ -109,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('scroll-progress');
   if (progressBar) {
     const mainContent = document.querySelector('.main-content');
-    const scrollTarget = mainContent || window;
+    let ticking = false;
 
     function updateProgress() {
       const el = mainContent || document.documentElement;
@@ -117,12 +115,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const scrollHeight = el.scrollHeight - el.clientHeight;
       const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
       progressBar.style.width = `${Math.min(progress, 100)}%`;
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
     }
 
     if (mainContent) {
-      mainContent.addEventListener('scroll', updateProgress);
+      mainContent.addEventListener('scroll', onScroll, { passive: true });
     } else {
-      window.addEventListener('scroll', updateProgress);
+      window.addEventListener('scroll', onScroll, { passive: true });
     }
   }
 
