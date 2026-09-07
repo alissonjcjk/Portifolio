@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background -->
+  <rect width="32" height="32" rx="8" fill="#0A0A0A"/>
+  <!-- Letter A stylizada em indigo -->
+  <path d="M16 6L24 26H20L18 21H14L12 26H8L16 6Z" fill="#6366F1"/>
+  <path d="M15 18H17L16 15L15 18Z" fill="#0A0A0A"/>
+</svg>
