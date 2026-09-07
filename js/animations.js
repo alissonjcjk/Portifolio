@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Typewriter Effect ---
+  // --- Typewriter Effectt ---
   const typeWriterElement = document.querySelector('.typewriter');
 
   const typewriterTexts = {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('visible');
