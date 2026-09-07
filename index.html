@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
 </head>
 <body>
   <!-- Theme Toggle & Language Toggle will be injected or placed here -->
@@ -39,7 +40,8 @@
 
       <nav class="nav-menu">
         <ul class="nav-list">
-          <li><a href="#about" class="nav-link active"><span class="nav-indicator"></span>Sobre</a></li>
+          <li><a href="#hero" class="nav-link active"><span class="nav-indicator"></span>Início</a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-indicator"></span>Sobre</a></li>
           <li><a href="#experience" class="nav-link"><span class="nav-indicator"></span>Experiência</a></li>
           <li><a href="#projects" class="nav-link"><span class="nav-indicator"></span>Projetos</a></li>
           <li><a href="#skills" class="nav-link"><span class="nav-indicator"></span>Habilidades</a></li>
@@ -63,6 +65,22 @@
     <main class="main-content">
       
       <!-- Sections will be built out in subsequent phases -->
+      <section id="hero" class="section hero-section">
+        <p class="hero-greeting fade-up">Olá, eu sou</p>
+        <h2 class="hero-title fade-up" style="animation-delay: 0.1s;">Alisson Bernardino.</h2>
+        <h3 class="hero-subtitle text-gradient fade-up" style="animation-delay: 0.2s;">
+          Eu construo a <span class="typewriter"></span>
+        </h3>
+        <p class="hero-bio fade-up" style="animation-delay: 0.3s;">
+          Sou um engenheiro de software focado na construção de experiências digitais acessíveis e escaláveis. Atualmente, desenvolvo soluções com Java, Spring Boot e Angular.
+        </p>
+        
+        <div class="hero-ctas fade-up" style="animation-delay: 0.4s;">
+          <a href="#projects" class="btn btn-primary">Ver meus projetos</a>
+          <a href="./assets/resume-pt.pdf" target="_blank" class="btn btn-outline">Currículo</a>
+        </div>
+      </section>
+
       <section id="about" class="section">
         <!-- About content -->
       </section>
@@ -88,5 +106,6 @@
 
   <!-- Scripts -->
   <script src="./js/nav.js"></script>
+  <script src="./js/animations.js"></script>
 </body>
 </html>
