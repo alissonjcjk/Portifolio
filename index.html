@@ -113,8 +113,67 @@
         </div>
       </section>
 
-      <section id="experience" class="section">
-        <!-- Experience content -->
+      <section id="experience" class="section experience-section">
+        <h3 class="section-title fade-up">Experiência</h3>
+        
+        <div class="experience-container fade-up" style="animation-delay: 0.1s;">
+          <!-- Tabs List -->
+          <div class="experience-tabs" role="tablist">
+            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-vlab" id="tab-vlab">V-lab</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-sti" id="tab-sti">STI-UFPE</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-voxar" id="tab-voxar">Voxar Labs</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-bora" id="tab-bora">Bora Impactar</button>
+            <div class="tab-highlight"></div>
+          </div>
+
+          <!-- Tabs Content Panels -->
+          <div class="experience-panels">
+            <!-- V-lab -->
+            <div class="tab-panel active" id="panel-vlab" role="tabpanel" aria-labelledby="tab-vlab">
+              <h4 class="job-title">Desenvolvedor Full Stack <span>@ V-lab</span></h4>
+              <p class="job-date">Out 2025 - Atual</p>
+              <ul class="job-details">
+                <li>Desenvolvimento de aplicações Full Stack para projetos de escopo nacional em parceria com órgãos do Governo Federal utilizando Java 21 e Angular.</li>
+                <li>Construção e evolução de APIs REST e microsserviços com JHipster, JPA/Hibernate, PostgreSQL e arquitetura baseada no princípio SOLID.</li>
+                <li>Uso intensivo de Apache Kafka para mensageria assíncrona, Redis para cache e Keycloak para segurança (OAuth 2.0, JWT).</li>
+                <li>Containerização de dependências distribuídas com Docker.</li>
+              </ul>
+            </div>
+
+            <!-- STI-UFPE -->
+            <div class="tab-panel" id="panel-sti" role="tabpanel" aria-labelledby="tab-sti" hidden>
+              <h4 class="job-title">Desenvolvedor Full Stack <span>@ STI-UFPE</span></h4>
+              <p class="job-date">Jan 2026 - Ago 2026</p>
+              <ul class="job-details">
+                <li>Desenvolvimento de interfaces web responsivas e acessíveis com React.js para módulos de software institucionais.</li>
+                <li>Atuação no contexto de microsserviços focada no tratamento de falhas e resiliência.</li>
+                <li>Experiência prática com Kubernetes, deployments, services e gerenciamento de workloads da instituição.</li>
+              </ul>
+            </div>
+
+            <!-- Voxar Labs -->
+            <div class="tab-panel" id="panel-voxar" role="tabpanel" aria-labelledby="tab-voxar" hidden>
+              <h4 class="job-title">Pesquisador em Visão Computacional <span>@ Voxar Labs (UFPE)</span></h4>
+              <p class="job-date">Set 2025 - Atual</p>
+              <ul class="job-details">
+                <li>Tratamento e análise de imagens com Python, PyTorch e Pandas.</li>
+                <li>Pesquisa aplicada em reconhecimento de expressões faciais.</li>
+                <li>Desenvolvimento de modelos para classificação de tipos de rodovias.</li>
+              </ul>
+            </div>
+
+            <!-- Bora Impactar -->
+            <div class="tab-panel" id="panel-bora" role="tabpanel" aria-labelledby="tab-bora" hidden>
+              <h4 class="job-title">Desenvolvedor Full Stack (Voluntário) <span>@ Bora Impactar</span></h4>
+              <p class="job-date">Set 2025</p>
+              <ul class="job-details">
+                <li>Desenvolvimento de novas funcionalidades para a plataforma social do Governo do Estado de Pernambuco.</li>
+                <li>Stack tecnológica abrangendo React.js, Node.js, Prisma ORM e banco de dados via Docker.</li>
+                <li>Integração direta de APIs REST com interfaces do usuário.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects" class="section">
