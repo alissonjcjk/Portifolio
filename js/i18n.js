@@ -81,7 +81,8 @@ const translations = {
     "footer.text": "Desenvolvido por Alisson Bernardino &copy; 2026",
     
     // UI Elements
-    "ui.lang": "EN"
+    "ui.lang": "EN",
+    "ui.lang.aria": "Mudar para inglês"
   },
   en: {
     // Navigation
@@ -165,63 +166,91 @@ const translations = {
     "footer.text": "Built by Alisson Bernardino &copy; 2026",
     
     // UI Elements
-    "ui.lang": "PT" // The button shows the *other* language
+    "ui.lang": "PT",
+    "ui.lang.aria": "Switch to Portuguese"
   }
 };
+
+// ─── Utilitário de tradução com fallback triplo ────────────────────────────
+// Tenta: idioma atual → fallback para PT → fallback para a própria chave
+function translate(lang, key) {
+  return translations[lang]?.[key]
+      ?? translations['pt']?.[key]
+      ?? key; // último recurso: exibe a chave bruta
+}
+
+// Detecta se uma string contém tags HTML — decide innerHTML vs textContent
+const HTML_TAG_RE = /<[a-zA-Z][^>]*>/;
+function hasHTML(str) {
+  return HTML_TAG_RE.test(str);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const langToggleBtn = document.getElementById('lang-toggle');
   if (!langToggleBtn) return;
-  
-  // Check local storage for preferred language
+
   let currentLang = localStorage.getItem('portfolio-lang') || 'pt';
-  
-  // Apply translations
+  // Flag para prevenir cliques duplos durante a animação de transição
+  let isTransitioning = false;
+
+  // ─── Aplica traduções no DOM ───────────────────────────────────────────
   const applyTranslations = (lang) => {
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[lang] && translations[lang][key]) {
-        if (el.tagName.toLowerCase() === 'input' && el.type === 'submit') {
-          el.value = translations[lang][key];
-        } else if (el.tagName.toLowerCase() === 'a' && el.classList.contains('btn-outline') && key === 'hero.cta.resume') {
-           // Handle resume link change
-           el.innerHTML = translations[lang][key];
-           el.href = lang === 'pt' ? './assets/resume-pt.pdf' : './assets/resume-en.pdf';
-        } else {
-          el.innerHTML = translations[lang][key];
-        }
+      const value = translate(lang, key);
+
+      if (el.tagName.toLowerCase() === 'input' && el.type === 'submit') {
+        // Input submit: usa value, não innerHTML
+        el.value = value;
+
+      } else if (el.tagName.toLowerCase() === 'a'
+          && el.classList.contains('btn-outline')
+          && key === 'hero.cta.resume') {
+        // Link do currículo: troca href junto com o texto
+        el.textContent = value; // texto puro, sem HTML
+        el.href = lang === 'pt' ? './assets/resume-pt.pdf' : './assets/resume-en.pdf';
+
+      } else if (hasHTML(value)) {
+        // String contém HTML (ex: <strong>, <br>) → innerHTML obrigatório
+        // Seguro aqui pois os valores são todos hardcoded no dicionário acima
+        el.innerHTML = value;
+
+      } else {
+        // String de texto puro → textContent é mais seguro e mais rápido
+        el.textContent = value;
       }
     });
-    
-    // Update document language
-    document.documentElement.lang = lang;
-    
-    // Update toggle button text
+
+    // Atualiza atributo lang do documento
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+    // Atualiza o botão de toggle (texto + aria-label)
     const toggleText = langToggleBtn.querySelector('span');
     if (toggleText) {
-      toggleText.textContent = translations[lang]['ui.lang'];
+      toggleText.textContent = translate(lang, 'ui.lang');
     }
+    langToggleBtn.setAttribute('aria-label', translate(lang, 'ui.lang.aria'));
   };
-  
-  // Initial apply
+
+  // Aplica idioma inicial
   applyTranslations(currentLang);
-  
-  // Toggle listener
+
+  // ─── Toggle de idioma com debounce anti-clique duplo ──────────────────
   langToggleBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    if (isTransitioning) return; // ignora cliques durante a transição
+    isTransitioning = true;
+
     currentLang = currentLang === 'pt' ? 'en' : 'pt';
     localStorage.setItem('portfolio-lang', currentLang);
-    
-    // Slight fade effect for transition
+
     document.body.style.opacity = '0';
     setTimeout(() => {
       applyTranslations(currentLang);
-      
-      // Update typewriter words in animations.js by dispatching a custom event
       window.dispatchEvent(new CustomEvent('languageChanged', { detail: currentLang }));
-      
       document.body.style.opacity = '1';
+      isTransitioning = false;
     }, 200);
   });
 });

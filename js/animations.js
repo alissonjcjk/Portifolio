@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Typewriter Effect ---
+  // --- Typewriter Effectt ---
   const typeWriterElement = document.querySelector('.typewriter');
 
   const typewriterTexts = {
@@ -23,15 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (typeWriterElement) {
+    // aria-live: leitores de tela anunciam as palavras digitadas
+    typeWriterElement.setAttribute('aria-live', 'polite');
+    typeWriterElement.setAttribute('aria-atomic', 'false');
+
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
     let typingSpeed = 100;
     let currentLang = getLang();
     let texts = typewriterTexts[currentLang];
+    let typewriterTimer = null; // referência para cancelamento
 
     function type() {
-      // Check if language changed
+      // Detecta mudança de idioma
       const newLang = getLang();
       if (newLang !== currentLang) {
         currentLang = newLang;
@@ -62,15 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
         typingSpeed = 500;
       }
 
-      setTimeout(type, typingSpeed);
+      // Armazena referência para poder cancelar se necessário
+      typewriterTimer = setTimeout(type, typingSpeed);
     }
 
-    setTimeout(type, 1000);
+    typewriterTimer = setTimeout(type, 1000);
 
-    // Listen for language changes
+    // Ao mudar idioma: reinicia o ciclo sem deixar timers órfãos
     window.addEventListener('languageChanged', (e) => {
+      if (typewriterTimer) clearTimeout(typewriterTimer);
       currentLang = e.detail;
       texts = typewriterTexts[currentLang];
+      textIndex = 0;
+      charIndex = 0;
+      isDeleting = false;
+      typewriterTimer = setTimeout(type, 500);
     });
   }
 
@@ -82,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('visible');

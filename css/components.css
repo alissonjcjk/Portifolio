@@ -137,6 +137,33 @@
   margin-left: var(--space-4);
 }
 
+/*
+ * Performance: content-visibility: auto nas seções abaixo do fold.
+ * O browser pula layout/paint até a seção se aproximar do viewport.
+ * contain-intrinsic-size evita layout shift ao estimar a altura.
+ * Não aplicado ao #hero para não atrasar o LCP.
+ */
+#about,
+#experience,
+#projects,
+#skills,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px; /* estimativa conservadora da altura */
+}
+
+/*
+ * Performance: will-change pontual nos cards que animam transform no hover.
+ * Limita a elementos que efetivamente usam compositing — não aplicar globalmente.
+ */
+.stat-card,
+.project-card.featured,
+.mini-project-card,
+.skill-item {
+  will-change: transform;
+}
+
+
 /* --- About Section Specifics --- */
 .about-content {
   display: flex;
