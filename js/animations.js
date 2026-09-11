@@ -7,13 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     pt: [
       "próxima geração da Web.",
       "solução do seu problema.",
-      "arquitetura ideal.",
       "experiência perfeita."
     ],
     en: [
       "next generation of the Web.",
       "solution to your problem.",
-      "ideal architecture.",
       "perfect experience."
     ]
   };
