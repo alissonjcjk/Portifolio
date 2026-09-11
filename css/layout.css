@@ -128,6 +128,13 @@
   scroll-margin-top: var(--space-8);
 }
 
+/* Hero subtitle: altura reservada para a frase mais longa
+   evita layout shift quando frases menores aparecem */
+.hero-subtitle {
+  min-height: clamp(3.8rem, 8vw + 2rem, 8rem);
+  align-items: flex-start;
+}
+
 /* Desktop Split Screen Layout */
 @media (min-width: 1024px) {
   .app-container {
@@ -152,5 +159,10 @@
 
   .nav-menu {
     display: block; /* Show on desktop */
+  }
+
+  /* No desktop a fonte é maior, frases longas podem quebrar em 2-3 linhas */
+  .hero-subtitle {
+    min-height: clamp(6rem, 12vw + 2rem, 14rem);
   }
 }

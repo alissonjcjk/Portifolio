@@ -6,9 +6,13 @@ const translations = {
     "nav.experience": "Experiência",
     "nav.projects": "Projetos",
     "nav.skills": "Habilidades",
+
+    // Sidebar
+    "sidebar.bio": "Desenvolvedor Full Stack com foco em Java e Angular. Experiência na construção de aplicações escaláveis, APIs RESTful e arquitetura de microsserviços.",
     
     // Hero
     "hero.greeting": "Olá, eu sou",
+    "hero.build": "Eu construo a ",
     "hero.bio": "Sou um engenheiro de software focado na construção de experiências digitais acessíveis e escaláveis. Atualmente, desenvolvo soluções com Java, Spring Boot e Angular.",
     "hero.cta.projects": "Ver meus projetos",
     "hero.cta.resume": "Currículo",
@@ -91,9 +95,13 @@ const translations = {
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.skills": "Skills",
+
+    // Sidebar
+    "sidebar.bio": "Full Stack Developer focused on Java and Angular, with experience building scalable applications, RESTful APIs, and microservices architectures.",
     
     // Hero
     "hero.greeting": "Hi, I am",
+    "hero.build": "I build the ",
     "hero.bio": "I'm a software engineer focused on building accessible and scalable digital experiences. Currently, I develop solutions with Java, Spring Boot, and Angular.",
     "hero.cta.projects": "Check out my work",
     "hero.cta.resume": "Resume",

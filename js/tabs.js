@@ -3,6 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabPanels = document.querySelectorAll('.tab-panel');
   const tabHighlight = document.querySelector('.tab-highlight');
 
+  function activateTab(button, moveFocus = false) {
+    tabButtons.forEach(btn => {
+      const isActive = btn === button;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', String(isActive));
+      btn.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
+
+    tabPanels.forEach(panel => {
+      const isActive = panel.id === button.getAttribute('aria-controls');
+      panel.classList.toggle('active', isActive);
+      panel.toggleAttribute('hidden', !isActive);
+    });
+
+    if (moveFocus) button.focus();
+    updateHighlight(button);
+  }
+
   function updateHighlight(activeButton) {
     if (!tabHighlight || !activeButton) return;
     
@@ -41,30 +59,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   tabButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Deactivate all
-      tabButtons.forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-      });
-      tabPanels.forEach(panel => {
-        panel.classList.remove('active');
-        panel.setAttribute('hidden', 'true');
-      });
+      activateTab(button);
+    });
 
-      // Activate clicked
-      button.classList.add('active');
-      button.setAttribute('aria-selected', 'true');
-      
-      const panelId = button.getAttribute('aria-controls');
-      const targetPanel = document.getElementById(panelId);
-      
-      if (targetPanel) {
-        targetPanel.removeAttribute('hidden');
-        // Small delay for CSS transition to kick in
-        setTimeout(() => targetPanel.classList.add('active'), 10);
+    button.addEventListener('keydown', (event) => {
+      const currentIndex = Array.from(tabButtons).indexOf(button);
+      let nextIndex;
+
+      if (['ArrowRight', 'ArrowDown'].includes(event.key)) {
+        nextIndex = (currentIndex + 1) % tabButtons.length;
+      } else if (['ArrowLeft', 'ArrowUp'].includes(event.key)) {
+        nextIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+      } else if (event.key === 'Home') {
+        nextIndex = 0;
+      } else if (event.key === 'End') {
+        nextIndex = tabButtons.length - 1;
+      } else {
+        return;
       }
 
-      updateHighlight(button);
+      event.preventDefault();
+      activateTab(tabButtons[nextIndex], true);
     });
   });
 });
