@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alisson Bernardino | Full Stack Java & Angular Developer</title>
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
   <link rel="apple-touch-icon" href="./assets/favicon.svg">
 
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="Portfolio de Alisson Bernardino, Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular. Baseado em Recife, PE. Portfolio of Alisson Bernardino, Full Stack Developer specializing in Java, Spring Boot, and Angular.">
-  <meta name="keywords" content="Alisson Bernardino, Full Stack Developer, Java, Angular, Spring Boot, Docker, Kubernetes, AWS, Kafka, Portfolio, Recife, UFPE">
+  <meta name="description"
+    content="Portfolio de Alisson Bernardino, Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular. Baseado em Recife, PE. Portfolio of Alisson Bernardino, Full Stack Developer specializing in Java, Spring Boot, and Angular.">
+  <meta name="keywords"
+    content="Alisson Bernardino, Full Stack Developer, Java, Angular, Spring Boot, Docker, Kubernetes, AWS, Kafka, Portfolio, Recife, UFPE">
   <meta name="author" content="Alisson Bernardino">
   <meta name="robots" content="index, follow">
   <!-- Cor da barra do browser no mobile (Android Chrome, Safari iOS) -->
@@ -21,14 +24,16 @@
 
   <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
   <meta property="og:title" content="Alisson Bernardino | Full Stack Developer">
-  <meta property="og:description" content="Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular. Sistemas de escopo nacional, arquitetura de microsserviços e Cloud.">
+  <meta property="og:description"
+    content="Desenvolvedor Full Stack especializado em Java, Spring Boot e Angular. Sistemas de escopo nacional, arquitetura de microsserviços e Cloud.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://alissonjcjk.github.io/Portifolio/">
   <meta property="og:site_name" content="Portfolio — Alisson Bernardino">
   <meta property="og:image" content="https://alissonjcjk.github.io/Portifolio/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Alisson Bernardino — Full Stack Developer: Java, Spring Boot, Angular, Docker, Kubernetes, AWS, Kafka">
+  <meta property="og:image:alt"
+    content="Alisson Bernardino — Full Stack Developer: Java, Spring Boot, Angular, Docker, Kubernetes, AWS, Kafka">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:locale:alternate" content="en_US">
 
@@ -77,7 +82,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">
@@ -86,66 +92,110 @@
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/components.css">
 </head>
+
 <body>
   <!-- Scroll Progress Bar -->
   <div id="scroll-progress" aria-hidden="true"></div>
   <!-- Theme Toggle & Language Toggle will be injected or placed here -->
-  
+
   <div class="app-container">
     <!-- Sidebar / Left Panel -->
     <header class="sidebar">
       <div class="profile-header">
+        <div class="profile-photo-wrap fade-up">
+          <img class="profile-photo" src="./assets/eu.jpg" alt="Alisson Bernardino" width="400" height="400"
+            decoding="async" fetchpriority="high">
+        </div>
         <div class="header-top">
           <p class="sidebar-name">Alisson Bernardino</p>
           <div class="header-controls">
-            <a href="#" id="theme-toggle" class="theme-toggle-btn" aria-label="Mudar tema">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            </a>
-            <a href="#" id="lang-toggle" class="lang-toggle-btn" aria-label="Mudar idioma">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Ativar tema claro">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+            </button>
+            <button type="button" id="lang-toggle" class="lang-toggle-btn" aria-label="Mudar para inglês">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
               <span>EN</span>
-            </a>
+            </button>
           </div>
         </div>
         <p class="sidebar-role">Full Stack Developer</p>
-        <p data-i18n="hero.bio">Desenvolvedor Full Stack com foco em Java e Angular. Experiência na construção de aplicações escaláveis, APIs RESTful e arquitetura de microsserviços.</p>
+        <p data-i18n="sidebar.bio">Desenvolvedor Full Stack com foco em Java e Angular. Experiência na construção de
+          aplicações escaláveis, APIs RESTful e arquitetura de microsserviços.</p>
       </div>
 
       <nav class="nav-menu">
         <ul class="nav-list">
-          <li><a href="#hero" class="nav-link active"><span class="nav-indicator"></span><span data-i18n="nav.home">Início</span></a></li>
-          <li><a href="#about" class="nav-link"><span class="nav-indicator"></span><span data-i18n="nav.about">Sobre</span></a></li>
-          <li><a href="#experience" class="nav-link"><span class="nav-indicator"></span><span data-i18n="nav.experience">Experiência</span></a></li>
-          <li><a href="#projects" class="nav-link"><span class="nav-indicator"></span><span data-i18n="nav.projects">Projetos</span></a></li>
-          <li><a href="#skills" class="nav-link"><span class="nav-indicator"></span><span data-i18n="nav.skills">Habilidades</span></a></li>
+          <li><a href="#hero" class="nav-link active"><span class="nav-indicator"></span><span
+                data-i18n="nav.home">Início</span></a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-indicator"></span><span
+                data-i18n="nav.about">Sobre</span></a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-indicator"></span><span
+                data-i18n="nav.experience">Experiência</span></a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-indicator"></span><span
+                data-i18n="nav.projects">Projetos</span></a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-indicator"></span><span
+                data-i18n="nav.skills">Habilidades</span></a></li>
         </ul>
       </nav>
 
       <div class="social-links">
-        <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
         </a>
-        <a href="https://linkedin.com/in/alisson-da-silva-bernadino-6535b3318" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://linkedin.com/in/alisson-da-silva-bernadino-6535b3318" target="_blank" rel="noopener noreferrer"
+          class="social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
         </a>
-        <a href="mailto:asb3@cin.ufpe.br" class="social-link" aria-label="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <a href="https://wa.me/5581999903818" target="_blank" rel="noopener noreferrer" class="social-link"
+          aria-label="Conversar pelo WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z" />
+            <path d="M9 8.5c.5 2 2 3.5 4 4l1-1 2 .5v2c0 .55-.45 1-1 1A7 7 0 0 1 8 8c0-.55.45-1 1-1h2l.5 2-1 1" />
+          </svg>
         </a>
       </div>
     </header>
 
     <!-- Mobile Navigation Bar (visível somente em telas < 1024px) -->
     <nav class="mobile-nav" aria-label="Navegação mobile">
-      <a href="#hero"       class="mobile-nav-link active" data-section="hero"       data-i18n="nav.home">Início</a>
-      <a href="#about"      class="mobile-nav-link"        data-section="about"      data-i18n="nav.about">Sobre</a>
-      <a href="#experience" class="mobile-nav-link"        data-section="experience" data-i18n="nav.experience">Experiência</a>
-      <a href="#projects"   class="mobile-nav-link"        data-section="projects"   data-i18n="nav.projects">Projetos</a>
-      <a href="#skills"     class="mobile-nav-link"        data-section="skills"     data-i18n="nav.skills">Habilidades</a>
+      <a href="#hero" class="mobile-nav-link active" data-section="hero" data-i18n="nav.home">Início</a>
+      <a href="#about" class="mobile-nav-link" data-section="about" data-i18n="nav.about">Sobre</a>
+      <a href="#experience" class="mobile-nav-link" data-section="experience" data-i18n="nav.experience">Experiência</a>
+      <a href="#projects" class="mobile-nav-link" data-section="projects" data-i18n="nav.projects">Projetos</a>
+      <a href="#skills" class="mobile-nav-link" data-section="skills" data-i18n="nav.skills">Habilidades</a>
     </nav>
 
     <!-- Main Content / Right Panel -->
     <main class="main-content">
-      
+
       <!-- Sections will be built out in subsequent phases -->
       <section id="hero" class="section hero-section">
         <p class="hero-greeting fade-up" data-i18n="hero.greeting">Olá, eu sou</p>
@@ -154,12 +204,14 @@
           <span data-i18n="hero.build">Eu construo a </span><span class="typewriter"></span>
         </h3>
         <p class="hero-bio fade-up" style="animation-delay: 0.3s;" data-i18n="hero.bio">
-          Sou um engenheiro de software focado na construção de experiências digitais acessíveis e escaláveis. Atualmente, desenvolvo soluções com Java, Spring Boot e Angular.
+          Sou um engenheiro de software focado na construção de experiências digitais acessíveis e escaláveis.
+          Atualmente, desenvolvo soluções com Java, Spring Boot e Angular.
         </p>
-        
+
         <div class="hero-ctas fade-up" style="animation-delay: 0.4s;">
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta.projects">Ver meus projetos</a>
-          <a href="./assets/resume-pt.pdf" target="_blank" class="btn btn-outline" data-i18n="hero.cta.resume" aria-label="Baixar currículo (PDF)">Currículo</a>
+          <a href="./assets/resume-pt.pdf" target="_blank" class="btn btn-outline" data-i18n="hero.cta.resume"
+            aria-label="Baixar currículo (PDF)">Currículo</a>
         </div>
       </section>
 
@@ -168,16 +220,23 @@
         <div class="about-content">
           <div class="about-text fade-up" style="animation-delay: 0.1s;">
             <p data-i18n="about.p1">
-              Sou o Alisson da Silva Bernardino, um Desenvolvedor Full Stack apaixonado por arquitetura de software e engenharia de qualidade. Atualmente graduando em Ciência da Computação pela UFPE, tenho focado minha carreira em ecossistemas robustos, principalmente utilizando <strong>Java (Spring Boot)</strong> e <strong>Angular</strong>.
+              Sou o Alisson da Silva Bernardino, um Desenvolvedor Full Stack apaixonado por arquitetura de software e
+              engenharia de qualidade. Atualmente graduando em Ciência da Computação pela UFPE, tenho focado minha
+              carreira em ecossistemas robustos, principalmente utilizando <strong>Java (Spring Boot)</strong> e
+              <strong>Angular</strong>.
             </p>
             <p data-i18n="about.p2">
-              Minha experiência abrange desde a criação de interfaces acessíveis até o desenho de APIs RESTful e microsserviços. Tenho atuado no desenvolvimento de sistemas de escopo nacional em parceria com órgãos do Governo Federal, garantindo alta disponibilidade com <strong>Docker, Kubernetes, AWS, e mensageria com Apache Kafka</strong>.
+              Minha experiência abrange desde a criação de interfaces acessíveis até o desenho de APIs RESTful e
+              microsserviços. Tenho atuado no desenvolvimento de sistemas de escopo nacional em parceria com órgãos do
+              Governo Federal, garantindo alta disponibilidade com <strong>Docker, Kubernetes, AWS, e mensageria com
+                Apache Kafka</strong>.
             </p>
             <p data-i18n="about.p3">
-              Quando não estou codando, estou pesquisando sobre Visão Computacional (Deep Learning com PyTorch) ou contribuindo para projetos open-source e iniciativas de impacto social.
+              Quando não estou codando, estou pesquisando sobre Visão Computacional (Deep Learning com PyTorch) ou
+              contribuindo para projetos open-source e iniciativas de impacto social.
             </p>
           </div>
-          
+
           <div class="about-stats">
             <div class="stat-card fade-up" style="animation-delay: 0.2s;">
               <span class="stat-number">2+</span>
@@ -197,14 +256,18 @@
 
       <section id="experience" class="section experience-section">
         <h2 class="section-title fade-up" data-i18n="exp.title">Experiência</h2>
-        
+
         <div class="experience-container fade-up" style="animation-delay: 0.1s;">
           <!-- Tabs List -->
           <div class="experience-tabs" role="tablist">
-            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-vlab" id="tab-vlab">V-lab</button>
-            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-sti" id="tab-sti">STI-UFPE</button>
-            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-voxar" id="tab-voxar">Voxar Labs</button>
-            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-bora" id="tab-bora">Bora Impactar</button>
+            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-vlab" id="tab-vlab"
+              tabindex="0">V-lab</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-sti" id="tab-sti"
+              tabindex="-1">STI-UFPE</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-voxar" id="tab-voxar"
+              tabindex="-1">Voxar Labs</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-bora" id="tab-bora"
+              tabindex="-1">Bora Impactar</button>
             <div class="tab-highlight"></div>
           </div>
 
@@ -212,30 +275,39 @@
           <div class="experience-panels">
             <!-- V-lab -->
             <div class="tab-panel active" id="panel-vlab" role="tabpanel" aria-labelledby="tab-vlab">
-              <h4 class="job-title"><span data-i18n="exp.vlab.title">Desenvolvedor Full Stack</span> <span>@ V-lab</span></h4>
+              <h4 class="job-title"><span data-i18n="exp.vlab.title">Desenvolvedor Full Stack</span> <span>@
+                  V-lab</span></h4>
               <p class="job-date" data-i18n="exp.vlab.date">Out 2025 - Atual</p>
               <ul class="job-details">
-                <li data-i18n="exp.vlab.l1">Desenvolvimento de aplicações Full Stack para projetos de escopo nacional em parceria com órgãos do Governo Federal utilizando Java 21 e Angular.</li>
-                <li data-i18n="exp.vlab.l2">Construção e evolução de APIs REST e microsserviços com JHipster, JPA/Hibernate, PostgreSQL e arquitetura baseada no princípio SOLID.</li>
-                <li data-i18n="exp.vlab.l3">Uso intensivo de Apache Kafka para mensageria assíncrona, Redis para cache e Keycloak para segurança (OAuth 2.0, JWT).</li>
+                <li data-i18n="exp.vlab.l1">Desenvolvimento de aplicações Full Stack para projetos de escopo nacional em
+                  parceria com órgãos do Governo Federal utilizando Java 21 e Angular.</li>
+                <li data-i18n="exp.vlab.l2">Construção e evolução de APIs REST e microsserviços com JHipster,
+                  JPA/Hibernate, PostgreSQL e arquitetura baseada no princípio SOLID.</li>
+                <li data-i18n="exp.vlab.l3">Uso intensivo de Apache Kafka para mensageria assíncrona, Redis para cache e
+                  Keycloak para segurança (OAuth 2.0, JWT).</li>
                 <li data-i18n="exp.vlab.l4">Containerização de dependências distribuídas com Docker.</li>
               </ul>
             </div>
 
             <!-- STI-UFPE -->
             <div class="tab-panel" id="panel-sti" role="tabpanel" aria-labelledby="tab-sti" hidden>
-              <h4 class="job-title"><span data-i18n="exp.sti.title">Desenvolvedor Full Stack</span> <span>@ STI-UFPE</span></h4>
+              <h4 class="job-title"><span data-i18n="exp.sti.title">Desenvolvedor Full Stack</span> <span>@
+                  STI-UFPE</span></h4>
               <p class="job-date" data-i18n="exp.sti.date">Jan 2026 - Ago 2026</p>
               <ul class="job-details">
-                <li data-i18n="exp.sti.l1">Desenvolvimento de interfaces web responsivas e acessíveis com React.js para módulos de software institucionais.</li>
-                <li data-i18n="exp.sti.l2">Atuação no contexto de microsserviços focada no tratamento de falhas e resiliência.</li>
-                <li data-i18n="exp.sti.l3">Experiência prática com Kubernetes, deployments, services e gerenciamento de workloads da instituição.</li>
+                <li data-i18n="exp.sti.l1">Desenvolvimento de interfaces web responsivas e acessíveis com React.js para
+                  módulos de software institucionais.</li>
+                <li data-i18n="exp.sti.l2">Atuação no contexto de microsserviços focada no tratamento de falhas e
+                  resiliência.</li>
+                <li data-i18n="exp.sti.l3">Experiência prática com Kubernetes, deployments, services e gerenciamento de
+                  workloads da instituição.</li>
               </ul>
             </div>
 
             <!-- Voxar Labs -->
             <div class="tab-panel" id="panel-voxar" role="tabpanel" aria-labelledby="tab-voxar" hidden>
-              <h4 class="job-title"><span data-i18n="exp.voxar.title">Pesquisador em Visão Computacional</span> <span>@ Voxar Labs (UFPE)</span></h4>
+              <h4 class="job-title"><span data-i18n="exp.voxar.title">Pesquisador em Visão Computacional</span> <span>@
+                  Voxar Labs (UFPE)</span></h4>
               <p class="job-date" data-i18n="exp.voxar.date">Set 2025 - Atual</p>
               <ul class="job-details">
                 <li data-i18n="exp.voxar.l1">Tratamento e análise de imagens com Python, PyTorch e Pandas.</li>
@@ -246,11 +318,14 @@
 
             <!-- Bora Impactar -->
             <div class="tab-panel" id="panel-bora" role="tabpanel" aria-labelledby="tab-bora" hidden>
-              <h4 class="job-title"><span data-i18n="exp.bora.title">Desenvolvedor Full Stack (Voluntário)</span> <span>@ Bora Impactar</span></h4>
+              <h4 class="job-title"><span data-i18n="exp.bora.title">Desenvolvedor Full Stack (Voluntário)</span>
+                <span>@ Bora Impactar</span></h4>
               <p class="job-date" data-i18n="exp.bora.date">Set 2025</p>
               <ul class="job-details">
-                <li data-i18n="exp.bora.l1">Desenvolvimento de novas funcionalidades para a plataforma social do Governo do Estado de Pernambuco.</li>
-                <li data-i18n="exp.bora.l2">Stack tecnológica abrangendo React.js, Node.js, Prisma ORM e banco de dados via Docker.</li>
+                <li data-i18n="exp.bora.l1">Desenvolvimento de novas funcionalidades para a plataforma social do Governo
+                  do Estado de Pernambuco.</li>
+                <li data-i18n="exp.bora.l2">Stack tecnológica abrangendo React.js, Node.js, Prisma ORM e banco de dados
+                  via Docker.</li>
                 <li data-i18n="exp.bora.l3">Integração direta de APIs REST com interfaces do usuário.</li>
               </ul>
             </div>
@@ -261,111 +336,430 @@
       <section id="projects" class="section projects-section">
         <h2 class="section-title fade-up" data-i18n="proj.title">Projetos em Destaque</h2>
 
-        <!-- Featured Project 1 -->
-        <div class="project-card featured fade-up" style="animation-delay: 0.1s;">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              </a>
-              <a href="#" class="project-link" aria-label="Link externo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <h4 class="project-title" data-i18n="proj.dashboard.title">Dashboard de Combustíveis</h4>
-          <p class="project-description" data-i18n="proj.dashboard.desc">
-            Plataforma web para análise e visualização de dados de postos de combustível, com processamento de planilhas, geração de relatórios e dashboards interativos. Sistema utilizado para otimizar a gestão de frotas e controle de custos.
-          </p>
-          <ul class="project-tech">
-            <li>Angular</li>
-            <li>Spring Boot</li>
-            <li>PostgreSQL</li>
-            <li>Chart.js</li>
-            <li>Docker</li>
-          </ul>
-        </div>
+        <p class="projects-intro fade-up" data-i18n="proj.intro">Uma seleção organizada por área de atuação, conectando
+          decisões técnicas, resultados e evidências visuais.</p>
 
-        <!-- Featured Project 2 -->
-        <div class="project-card featured fade-up" style="animation-delay: 0.2s;">
-          <div class="project-header">
-            <div class="project-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <nav class="project-category-nav fade-up" aria-label="Categorias de projetos">
+          <a href="#projects-engineering" data-i18n="proj.nav.engineering">Engenharia de Software</a>
+          <a href="#projects-ai" data-i18n="proj.nav.ai">IA &amp; Data Science</a>
+          <a href="#projects-azure" data-i18n="proj.nav.azure">Microsoft Azure</a>
+        </nav>
+
+        <div id="projects-engineering" class="project-category project-category--engineering">
+          <header class="project-category-header fade-up">
+            <span class="project-category-index">01</span>
+            <div>
+              <p class="project-category-kicker" data-i18n="proj.engineering.kicker">Produtos digitais &amp; sistemas
+                distribuídos</p>
+              <h3 data-i18n="proj.engineering.title">Engenharia de Software</h3>
+              <p data-i18n="proj.engineering.desc">Aplicações full stack construídas com foco em arquitetura,
+                resiliência, segurança e experiência de uso.</p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </header>
+
+          <!-- Featured Project 1 -->
+          <div class="project-card featured fade-up" style="animation-delay: 0.1s;">
+            <div class="project-header">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="7" rx="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
+                <span class="project-link" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" x2="21" y1="14" y2="3" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-gallery project-gallery--two">
+              <a href="./assets/dashboard-projeto-combustíveis-gov.png" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/dashboard-projeto-combustíveis-gov.png"
+                  alt="Dashboard analítico do projeto governamental de combustíveis" width="1841" height="990"
+                  loading="lazy" decoding="async">
               </a>
-              <a href="#" class="project-link" aria-label="Link externo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              <a href="./assets/Consulta-projeto-combustíveis-gov.png" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/Consulta-projeto-combustíveis-gov.png"
+                  alt="Tela de consulta do projeto governamental de combustíveis" width="1855" height="1008"
+                  loading="lazy" decoding="async">
               </a>
             </div>
+            <h4 class="project-title" data-i18n="proj.dashboard.title">Dashboard de Combustíveis</h4>
+            <p class="project-description" data-i18n="proj.dashboard.desc">
+              Plataforma web para análise e visualização de dados de postos de combustível, com processamento de
+              planilhas, geração de relatórios e dashboards interativos. Sistema utilizado para otimizar a gestão de
+              frotas e controle de custos.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="proj.dashboard.l1">Interface inspirada no padrão visual do Governo Federal, com identidade
+                em azul institucional.</li>
+              <li data-i18n="proj.dashboard.l2">Estado organizado com Facade Pattern, Observables e RxJS.</li>
+              <li data-i18n="proj.dashboard.l3">Dashboards interativos com Chart.js e ambiente de desenvolvimento
+                apoiado por JSON Server.</li>
+            </ul>
+            <ul class="project-tech">
+              <li>Angular 21</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>RxJS</li>
+              <li>Chart.js</li>
+              <li>JSON Server</li>
+            </ul>
           </div>
-          <h4 class="project-title" data-i18n="proj.vet.title">Sistema de Gestão Veterinária</h4>
-          <p class="project-description" data-i18n="proj.vet.desc">
-            Aplicação full stack para clínicas veterinárias com gerenciamento de consultas, prontuários de animais, controle de estoque e agendamentos. Interface responsiva e API RESTful completa com autenticação JWT.
-          </p>
-          <ul class="project-tech">
-            <li>React.js</li>
-            <li>Java</li>
-            <li>Spring Security</li>
-            <li>MySQL</li>
-            <li>JWT</li>
-          </ul>
+
+          <!-- Featured Project 2 -->
+          <div class="project-card featured fade-up" style="animation-delay: 0.2s;">
+            <div class="project-header">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
+                <span class="project-link" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" x2="21" y1="14" y2="3" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <a class="project-video" href="https://youtu.be/A6Wi8iJuvho?si=WbSEK7_MkRVX18DE" target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Assistir à demonstração do sistema de estoque e notas fiscais no YouTube">
+              <img src="https://i.ytimg.com/vi/A6Wi8iJuvho/hqdefault.jpg"
+                alt="Demonstração em vídeo do sistema de estoque e notas fiscais" width="480" height="360"
+                loading="lazy" decoding="async">
+              <span class="project-video-play" aria-hidden="true">▶</span>
+              <span class="project-video-label" data-i18n="proj.video.watch">Assistir demonstração</span>
+            </a>
+            <h4 class="project-title" data-i18n="proj.vet.title">Gestão de Produtos, Estoque e Notas Fiscais</h4>
+            <p class="project-description" data-i18n="proj.vet.desc">
+              Plataforma distribuída para gestão de produtos, estoque e emissão de notas fiscais, projetada como uma
+              arquitetura de microsserviços resiliente e orientada a eventos.
+            </p>
+            <ul class="project-highlights">
+              <li data-i18n="proj.vet.l1">Bancos PostgreSQL independentes por microsserviço, comunicação assíncrona com
+                RabbitMQ e MassTransit.</li>
+              <li data-i18n="proj.vet.l2">Outbox Pattern, idempotência, concorrência otimista e resiliência com Polly,
+                Retry e Circuit Breaker.</li>
+              <li data-i18n="proj.vet.l3">Análise consultiva de notas fiscais com Groq e GPT-OSS, além de tratamento
+                global padronizado de erros.</li>
+            </ul>
+            <ul class="project-tech">
+              <li>Angular 19</li>
+              <li>ASP.NET Core 9</li>
+              <li>PostgreSQL</li>
+              <li>RabbitMQ</li>
+              <li>MassTransit</li>
+              <li>Docker Compose</li>
+              <li>Groq + GPT-OSS</li>
+            </ul>
+          </div>
+
+          <div class="project-card featured fade-up" style="animation-delay: 0.25s;">
+            <div class="project-header">
+              <div class="project-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="5" rx="3" />
+                  <path d="M16 13h.01" />
+                  <path d="M2 10h20" />
+                </svg>
+              </div>
+              <a href="https://youtu.be/S305NmO-8eU?si=1153u6vpCl4ajj0j" target="_blank" rel="noopener noreferrer"
+                class="project-link" aria-label="Abrir vídeo da carteira digital no YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" x2="21" y1="14" y2="3" />
+                </svg>
+              </a>
+            </div>
+            <a class="project-video" href="https://youtu.be/S305NmO-8eU?si=1153u6vpCl4ajj0j" target="_blank"
+              rel="noopener noreferrer" aria-label="Assistir à demonstração da carteira digital no YouTube">
+              <img src="https://i.ytimg.com/vi/S305NmO-8eU/hqdefault.jpg"
+                alt="Demonstração em vídeo da carteira digital full stack" width="480" height="360" loading="lazy"
+                decoding="async">
+              <span class="project-video-play" aria-hidden="true">▶</span>
+              <span class="project-video-label" data-i18n="proj.video.watch">Assistir demonstração</span>
+            </a>
+            <h4 class="project-title" data-i18n="proj.wallet.title">Carteira Digital Full Stack</h4>
+            <p class="project-description" data-i18n="proj.wallet.desc">Carteira digital criada para o desafio prático
+              do bootcamp Santander, com backend de alta performance em Rust e uma camada de segurança pensada para
+              reduzir a superfície de ataques XSS.</p>
+            <ul class="project-highlights">
+              <li data-i18n="proj.wallet.l1">Backend assíncrono com Rust e Axum.</li>
+              <li data-i18n="proj.wallet.l2">Autenticação baseada em cookies nativos HttpOnly.</li>
+              <li data-i18n="proj.wallet.l3">Frontend enxuto com JavaScript Vanilla e Tailwind CSS.</li>
+            </ul>
+            <ul class="project-tech">
+              <li>Rust</li>
+              <li>Axum</li>
+              <li>HttpOnly Cookies</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+
         </div>
 
         <!-- Other Projects Grid -->
-        <h4 class="other-projects-title fade-up" style="animation-delay: 0.3s;" data-i18n="proj.other.title">Outros Projetos Notáveis</h4>
-        <div class="other-projects-grid">
-          <div class="mini-project-card fade-up" style="animation-delay: 0.35s;">
-            <div class="project-header">
-              <div class="project-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-              </div>
-              <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              </a>
+        <div id="projects-ai" class="project-category project-category--ai">
+          <header class="project-category-header fade-up">
+            <span class="project-category-index">02</span>
+            <div>
+              <p class="project-category-kicker" data-i18n="proj.ai.kicker">Modelagem, avaliação &amp; explicabilidade
+              </p>
+              <h3 data-i18n="proj.ai.title">IA &amp; Data Science</h3>
+              <p data-i18n="proj.ai.desc">Projetos de redes neurais e visão computacional apresentados com seus
+                pipelines, estratégias contra viés e resultados experimentais.</p>
             </div>
-            <h5 data-i18n="proj.face.title">Reconhecimento Facial (PyTorch)</h5>
-            <p data-i18n="proj.face.desc">Modelo de deep learning para classificação de expressões faciais, desenvolvido durante pesquisa no Voxar Labs.</p>
-            <ul class="project-tech small">
-              <li>Python</li><li>PyTorch</li><li>Pandas</li>
-            </ul>
-          </div>
+          </header>
+          <div class="other-projects-grid">
+            <article class="mini-project-card ai-project-card fade-up" style="animation-delay: 0.35s;">
+              <div class="project-header">
+                <div class="project-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  </svg>
+                </div>
+                <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
+              </div>
+              <div class="project-gallery project-gallery--stacked">
+                <a href="./assets/results_consolidated-projeto-visao-computacional.png" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="./assets/results_consolidated-projeto-visao-computacional.png"
+                    alt="Resultados consolidados do classificador de tipos de rodovia" width="1389" height="495"
+                    loading="lazy" decoding="async">
+                </a>
+                <a href="./assets/grad_cam_comparison-visao-computacional.png" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="./assets/grad_cam_comparison-visao-computacional.png"
+                    alt="Comparação Grad-CAM das regiões de atenção do modelo de visão computacional" width="2408"
+                    height="989" loading="lazy" decoding="async">
+                </a>
+              </div>
+              <h5 data-i18n="proj.face.title">Classificação de Rodovias com Visão Computacional</h5>
+              <p data-i18n="proj.face.desc">Pipeline em PyTorch com ResNet-18 para classificar tipos de pavimentação,
+                mantendo a distribuição das classes e tornando as decisões do modelo auditáveis.</p>
+              <dl class="project-specs">
+                <div>
+                  <dt data-i18n="proj.face.s1.label">Modelo</dt>
+                  <dd data-i18n="proj.face.s1.value">ResNet-18 com backbone congelado e cabeça totalmente conectada</dd>
+                </div>
+                <div>
+                  <dt data-i18n="proj.face.s2.label">Viés</dt>
+                  <dd data-i18n="proj.face.s2.value">Weighted CrossEntropy para dar maior peso à classe Belgian Blocks
+                  </dd>
+                </div>
+                <div>
+                  <dt data-i18n="proj.face.s3.label">Aumentação</dt>
+                  <dd data-i18n="proj.face.s3.value">Color Jitter, Motion Blur, flips e rotações</dd>
+                </div>
+                <div>
+                  <dt data-i18n="proj.face.s4.label">Explicabilidade</dt>
+                  <dd>Grad-CAM</dd>
+                </div>
+              </dl>
+              <ul class="project-tech small">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>ResNet-18</li>
+                <li>Grad-CAM</li>
+              </ul>
+            </article>
 
-          <div class="mini-project-card fade-up" style="animation-delay: 0.4s;">
-            <div class="project-header">
-              <div class="project-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            <article class="mini-project-card ai-project-card fade-up" style="animation-delay: 0.4s;">
+              <div class="project-header">
+                <div class="project-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                    <path d="M2 12h20" />
+                  </svg>
+                </div>
+                <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
               </div>
-              <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              </a>
-            </div>
-            <h5 data-i18n="proj.bora.title">Plataforma Social — Bora Impactar</h5>
-            <p data-i18n="proj.bora.desc">Features para plataforma social do Governo de Pernambuco para conectar iniciativas de impacto social e voluntários.</p>
-            <ul class="project-tech small">
-              <li>React.js</li><li>Node.js</li><li>Prisma</li>
-            </ul>
-          </div>
+              <div class="project-gallery project-gallery--two">
+                <a href="./assets/projeto-mlp-titanic-heatmap.png" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/projeto-mlp-titanic-heatmap.png"
+                    alt="Heatmap da análise exploratória do dataset Titanic" width="776" height="682" loading="lazy"
+                    decoding="async">
+                </a>
+                <a href="./assets/matriz_confusao_final-mlp-titanic.png" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/matriz_confusao_final-mlp-titanic.png"
+                    alt="Matriz de confusão final da rede MLP no dataset Titanic" width="555" height="470"
+                    loading="lazy" decoding="async">
+                </a>
+              </div>
+              <h5 data-i18n="proj.bora.title">Predição de Sobrevivência no Titanic com MLP</h5>
+              <p data-i18n="proj.bora.desc">Estudo completo de classificação, da análise exploratória à avaliação do
+                melhor modelo em dados nunca vistos.</p>
+              <ol class="project-pipeline">
+                <li data-i18n="proj.bora.l1">EDA para compreender variáveis e padrões de sobrevivência.</li>
+                <li data-i18n="proj.bora.l2">Divisão estratificada: 50% treino, 25% validação e 25% teste.</li>
+                <li data-i18n="proj.bora.l3">Limpeza, imputação de nulos e codificação de variáveis categóricas.</li>
+                <li data-i18n="proj.bora.l4">Oversampling apenas na classe minoritária do conjunto de treino.</li>
+                <li data-i18n="proj.bora.l5">Treinamento da MLP, otimização por validação e avaliação final.</li>
+              </ol>
+              <ul class="project-tech small">
+                <li>Python</li>
+                <li>MLP</li>
+                <li>EDA</li>
+                <li>Oversampling</li>
+              </ul>
+            </article>
 
-          <div class="mini-project-card fade-up" style="animation-delay: 0.45s;">
-            <div class="project-header">
-              <div class="project-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            <article class="mini-project-card ai-project-card fade-up" style="animation-delay: 0.45s;">
+              <div class="project-header">
+                <div class="project-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                  </svg>
+                </div>
+                <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link"
+                  aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
               </div>
-              <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              </a>
+              <figure class="project-external-figure">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Neural_Network.svg"
+                  alt="Diagrama de uma rede neural artificial" width="2457" height="1134" loading="lazy"
+                  decoding="async">
+                <figcaption><span data-i18n="proj.sti.image.credit">Imagem ilustrativa:</span> <a
+                    href="https://commons.wikimedia.org/wiki/File:Neural_Network.svg" target="_blank"
+                    rel="noopener noreferrer">QuantuMechaniX8 / Wikimedia Commons — CC0</a></figcaption>
+              </figure>
+              <h5 data-i18n="proj.sti.title">Aprendizado Não Supervisionado com MLP</h5>
+              <p data-i18n="proj.sti.desc">Experimento de aprendizado não supervisionado voltado à descoberta de
+                estruturas e representações latentes nos dados.</p>
+              <ul class="project-tech small">
+                <li>Python</li>
+                <li>MLP</li>
+                <li>Unsupervised Learning</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div id="projects-azure" class="project-category project-category--azure">
+          <header class="project-category-header fade-up">
+            <span class="project-category-index">03</span>
+            <div>
+              <p class="project-category-kicker" data-i18n="proj.azure.kicker">Cloud, busca inteligente &amp; IA
+                generativa</p>
+              <h3 data-i18n="proj.azure.title">Microsoft Azure</h3>
+              <p data-i18n="proj.azure.desc">Laboratórios práticos explorando os serviços disponíveis no ambiente Azure,
+                da indexação e busca semântica à integração com modelos generativos.</p>
             </div>
-            <h5 data-i18n="proj.sti.title">Microsserviços Universitários — STI-UFPE</h5>
-            <p data-i18n="proj.sti.desc">Módulos de software institucional com React.js, orquestração via Kubernetes e resiliência de microsserviços.</p>
-            <ul class="project-tech small">
-              <li>React.js</li><li>Kubernetes</li><li>Microservices</li>
-            </ul>
+          </header>
+
+          <div class="azure-project-grid">
+            <article class="azure-project-card fade-up">
+              <div class="azure-project-heading">
+                <span class="azure-badge">Azure AI Search</span>
+                <h4 data-i18n="proj.azure.search.title">Busca Cognitiva e Indexação Inteligente</h4>
+                <p data-i18n="proj.azure.search.desc">Configuração de uma solução de pesquisa enriquecida, cobrindo
+                  ingestão, indexação, consulta e exploração dos resultados dentro do ecossistema Azure.</p>
+              </div>
+              <div class="project-gallery project-gallery--two">
+                <a href="./assets/azure-search.png" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/azure-search.png" alt="Configuração do laboratório Azure AI Search" width="1355"
+                    height="643" loading="lazy" decoding="async">
+                </a>
+                <a href="./assets/azure-search2.png" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/azure-search2.png" alt="Resultados de consulta no Azure AI Search" width="1008"
+                    height="488" loading="lazy" decoding="async">
+                </a>
+              </div>
+              <ul class="project-tech">
+                <li>Azure AI Search</li>
+                <li>Indexers</li>
+                <li>Skillsets</li>
+                <li>Semantic Search</li>
+              </ul>
+            </article>
+
+            <article class="azure-project-card fade-up" style="animation-delay: 0.1s;">
+              <div class="azure-project-heading">
+                <span class="azure-badge">Azure OpenAI</span>
+                <h4 data-i18n="proj.azure.openai.title">Laboratório de IA Generativa</h4>
+                <p data-i18n="proj.azure.openai.desc">Experimentação com os recursos do Azure OpenAI, criação de
+                  prompts, configuração de modelos e validação de respostas em cenários práticos.</p>
+              </div>
+              <div class="project-gallery project-gallery--two">
+                <a href="./assets/lab-azure-openapi.png" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/lab-azure-openapi.png" alt="Configuração de laboratório no Azure OpenAI"
+                    width="507" height="412" loading="lazy" decoding="async">
+                </a>
+                <a href="./assets/lab-azure-openapi2.png" target="_blank" rel="noopener noreferrer">
+                  <img src="./assets/lab-azure-openapi2.png" alt="Execução de prompt no laboratório Azure OpenAI"
+                    width="697" height="662" loading="lazy" decoding="async">
+                </a>
+              </div>
+              <ul class="project-tech">
+                <li>Azure OpenAI</li>
+                <li>Prompt Engineering</li>
+                <li>Model Deployment</li>
+                <li>Responsible AI</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -378,19 +772,41 @@
           <h4 class="skill-group-title" data-i18n="skills.backend">Backend</h4>
           <div class="skills-grid">
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Java</title><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.19 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.631"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Java</title>
+                <path
+                  d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.19 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.631" />
+              </svg>
               <span>Java</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Spring Boot</title><path d="M20.205 16.392c-2.469 3.289-7.741 2.179-11.122 2.338 0 0-.599.034-1.201.133 0 0 .228-.097.519-.198 2.374-.821 3.496-.986 4.939-1.727 2.71-1.388 5.408-4.413 5.957-7.555-1.032 3.022-4.17 5.623-7.027 6.679-1.955.722-5.492 1.424-5.493 1.424a5.28 5.28 0 0 1-.143-.076C5.275 16.842 5.1 14.258 7.039 12.293c.817-.826 1.86-1.452 2.974-1.838C12.148 9.686 14.2 9.7 16.124 9.09c2.053-.647 4.45-2.638 5.42-4.668.787 3.501-.466 7.429-1.339 11.97"/><path d="M14.934.007C14.934.007 17.328 2.4 14.6 6.359c-2.147 3.149-4.905 4.007-7.78 5.993-2.605 1.794-3.395 4.498-2.49 6.931C2.042 16.637-.083 12.758.005 9.168.229 1.562 8.947-1.049 14.934.007"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Spring Boot</title>
+                <path
+                  d="M20.205 16.392c-2.469 3.289-7.741 2.179-11.122 2.338 0 0-.599.034-1.201.133 0 0 .228-.097.519-.198 2.374-.821 3.496-.986 4.939-1.727 2.71-1.388 5.408-4.413 5.957-7.555-1.032 3.022-4.17 5.623-7.027 6.679-1.955.722-5.492 1.424-5.493 1.424a5.28 5.28 0 0 1-.143-.076C5.275 16.842 5.1 14.258 7.039 12.293c.817-.826 1.86-1.452 2.974-1.838C12.148 9.686 14.2 9.7 16.124 9.09c2.053-.647 4.45-2.638 5.42-4.668.787 3.501-.466 7.429-1.339 11.97" />
+                <path
+                  d="M14.934.007C14.934.007 17.328 2.4 14.6 6.359c-2.147 3.149-4.905 4.007-7.78 5.993-2.605 1.794-3.395 4.498-2.49 6.931C2.042 16.637-.083 12.758.005 9.168.229 1.562 8.947-1.049 14.934.007" />
+              </svg>
               <span>Spring Boot</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Node.js</title><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082 c0.57,0.329,0.924,0.944,0.924,1.603v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Node.js</title>
+                <path
+                  d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082 c0.57,0.329,0.924,0.944,0.924,1.603v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z" />
+              </svg>
               <span>Node.js</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Python</title><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.04zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Python</title>
+                <path
+                  d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM21.1 6.11l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.04zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08-.33.23z" />
+              </svg>
               <span>Python</span>
             </div>
           </div>
@@ -401,19 +817,39 @@
           <h4 class="skill-group-title" data-i18n="skills.frontend">Frontend</h4>
           <div class="skills-grid">
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Angular</title><path d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.586-5.243 1.728-14.771zM21.818 8.56l-6.55 1.29-2.133 4.5h2.841l.61 1.542H9.413l.61-1.542h2.842l-2.133-4.5-6.55-1.29.474-1.984 5.964 1.174 2.38 5.628 2.38-5.628 5.964-1.174z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Angular</title>
+                <path
+                  d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.586-5.243 1.728-14.771zM21.818 8.56l-6.55 1.29-2.133 4.5h2.841l.61 1.542H9.413l.61-1.542h2.842l-2.133-4.5-6.55-1.29.474-1.984 5.964 1.174 2.38 5.628 2.38-5.628 5.964-1.174z" />
+              </svg>
               <span>Angular</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>React</title><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09c.399 0 .72.09.919.333.764.88.51 3.027-.23 5.455a21.388 21.388 0 0 0-1.256-.245 21.51 21.51 0 0 0-1.405-1.782 21.515 21.515 0 0 0 1.254-1.803c.742-2.432.99-4.58.717-5.158zm-9.169 2.775c.227-.07.458-.1.687-.1.985 0 2.173.514 3.42 1.44a21.517 21.517 0 0 0-1.259 1.803c-.46.054-.898.135-1.394.254a21.411 21.411 0 0 0-1.254-1.803 19.57 19.57 0 0 0-.231-.296c-.17-.209-.327-.404-.47-.583-.141-.176-.27-.34-.386-.486-.116-.147-.22-.28-.308-.4-.164-.218-.296-.41-.395-.576a1.96 1.96 0 0 1-.133-.266c-.011-.028-.019-.055-.027-.082-.014-.053-.023-.107-.025-.162.001-.05.01-.098.03-.143.025-.056.062-.107.112-.15.05-.043.11-.079.18-.107.07-.027.148-.046.234-.056.08-.01.168-.015.264-.015zm6.947 5.22a20.8 20.8 0 0 1-.753 1.308 21.484 21.484 0 0 1-1.505 0 20.774 20.774 0 0 1-.75-1.308A20.75 20.75 0 0 1 12 10.7c.449.011.908.042 1.377.11.14.021.275.044.407.069a20.767 20.767 0 0 1 .647 1.125zm1.844-1.27a21.45 21.45 0 0 0-1.395-.253 21.573 21.573 0 0 0-1.257-1.803c1.247-.926 2.436-1.44 3.421-1.44.23 0 .46.03.688.1.573.174.998.563 1.128 1.108.215.9-.056 2.16-.585 3.288zm-9.84 3.504c.466.12.956.213 1.456.278a21.558 21.558 0 0 0 1.278 1.761 21.44 21.44 0 0 0-1.278 1.76c-.5.065-.99.158-1.456.277C3.56 14.8 2.44 13.44 2.44 12.004c0-1.435 1.12-2.796 2.706-3.804zm-.11 7.3c.13-.545.555-.934 1.128-1.108.228-.07.459-.1.688-.1.985 0 2.173.514 3.42 1.44a21.434 21.434 0 0 0-1.257 1.803 21.45 21.45 0 0 0-1.395.253c-.53 1.128-.8 2.388-.585 3.289-.13.545-.555.934-1.128 1.108a1.972 1.972 0 0 1-.545.078c-.764 0-1.443-.46-1.7-1.184-.215-.9.056-2.16.585-3.288zm9.84 3.504a21.573 21.573 0 0 0-1.257 1.803c1.247.926 2.436 1.44 3.421 1.44.23 0 .46-.03.688-.1.573-.174.998-.563 1.128-1.108.215-.9-.056-2.16-.585-3.289a21.45 21.45 0 0 0-1.395-.253zm-1.39-1.53a21.484 21.484 0 0 1-1.505 0 20.774 20.774 0 0 1-.75-1.308A20.75 20.75 0 0 1 12 13.3a20.75 20.75 0 0 1 1.377-.11c.14.021.275.044.407.069a20.767 20.767 0 0 1 .647 1.125 20.8 20.8 0 0 1-.753 1.308zm3.093 2.2c.53-1.128.8-2.388.585-3.289-.13-.544-.555-.934-1.128-1.107-.228-.07-.459-.1-.688-.1-.985 0-2.173.514-3.42 1.44a21.573 21.573 0 0 0 1.257 1.803 21.45 21.45 0 0 0 1.395.253c.53 1.128.8 2.388.585 3.288-.215.9-.642 1.3-1.278 1.39z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>React</title>
+                <path
+                  d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09c.399 0 .72.09.919.333.764.88.51 3.027-.23 5.455a21.388 21.388 0 0 0-1.256-.245 21.51 21.51 0 0 0-1.405-1.782 21.515 21.515 0 0 0 1.254-1.803c.742-2.432.99-4.58.717-5.158zm-9.169 2.775c.227-.07.458-.1.687-.1.985 0 2.173.514 3.42 1.44a21.517 21.517 0 0 0-1.259 1.803c-.46.054-.898.135-1.394.254a21.411 21.411 0 0 0-1.254-1.803 19.57 19.57 0 0 0-.231-.296c-.17-.209-.327-.404-.47-.583-.141-.176-.27-.34-.386-.486-.116-.147-.22-.28-.308-.4-.164-.218-.296-.41-.395-.576a1.96 1.96 0 0 1-.133-.266c-.011-.028-.019-.055-.027-.082-.014-.053-.023-.107-.025-.162.001-.05.01-.098.03-.143.025-.056.062-.107.112-.15.05-.043.11-.079.18-.107.07-.027.148-.046.234-.056.08-.01.168-.015.264-.015zm6.947 5.22a20.8 20.8 0 0 1-.753 1.308 21.484 21.484 0 0 1-1.505 0 20.774 20.774 0 0 1-.75-1.308A20.75 20.75 0 0 1 12 10.7c.449.011.908.042 1.377.11.14.021.275.044.407.069a20.767 20.767 0 0 1 .647 1.125zm1.844-1.27a21.45 21.45 0 0 0-1.395-.253 21.573 21.573 0 0 0-1.257-1.803c1.247-.926 2.436-1.44 3.421-1.44.23 0 .46.03.688.1.573.174.998.563 1.128 1.108.215.9-.056 2.16-.585 3.288zm-9.84 3.504c.466.12.956.213 1.456.278a21.558 21.558 0 0 0 1.278 1.761 21.44 21.44 0 0 0-1.278 1.76c-.5.065-.99.158-1.456.277C3.56 14.8 2.44 13.44 2.44 12.004c0-1.435 1.12-2.796 2.706-3.804zm-.11 7.3c.13-.545.555-.934 1.128-1.108.228-.07.459-.1.688-.1.985 0 2.173.514 3.42 1.44a21.434 21.434 0 0 0-1.257 1.803 21.45 21.45 0 0 0-1.395.253c-.53 1.128-.8 2.388-.585 3.289-.13.545-.555.934-1.128 1.108a1.972 1.972 0 0 1-.545.078c-.764 0-1.443-.46-1.7-1.184-.215-.9.056-2.16.585-3.288zm9.84 3.504a21.573 21.573 0 0 0-1.257 1.803c1.247.926 2.436 1.44 3.421 1.44.23 0 .46-.03.688-.1.573-.174.998-.563 1.128-1.108.215-.9-.056-2.16-.585-3.289a21.45 21.45 0 0 0-1.395-.253zm-1.39-1.53a21.484 21.484 0 0 1-1.505 0 20.774 20.774 0 0 1-.75-1.308A20.75 20.75 0 0 1 12 13.3a20.75 20.75 0 0 1 1.377-.11c.14.021.275.044.407.069a20.767 20.767 0 0 1 .647 1.125 20.8 20.8 0 0 1-.753 1.308zm3.093 2.2c.53-1.128.8-2.388.585-3.289-.13-.544-.555-.934-1.128-1.107-.228-.07-.459-.1-.688-.1-.985 0-2.173.514-3.42 1.44a21.573 21.573 0 0 0 1.257 1.803 21.45 21.45 0 0 0 1.395.253c.53 1.128.8 2.388.585 3.288-.215.9-.642 1.3-1.278 1.39z" />
+              </svg>
               <span>React</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>TypeScript</title><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>TypeScript</title>
+                <path
+                  d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" />
+              </svg>
               <span>TypeScript</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>HTML5</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>HTML5</title>
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+              </svg>
               <span>HTML5/CSS3</span>
             </div>
           </div>
@@ -424,19 +860,39 @@
           <h4 class="skill-group-title" data-i18n="skills.devops">DevOps & Cloud</h4>
           <div class="skills-grid">
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Docker</title><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.186.186 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Docker</title>
+                <path
+                  d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.186.186 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z" />
+              </svg>
               <span>Docker</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Kubernetes</title><path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005.485.606zm-.833-2.129l-2.588-.025a6.679 6.679 0 0 1 .863-3.349l2.086 1.537-.003.003-.358 1.834zm9.357 2.129l-.496-.615.003-.01 2.578.437a5.17 5.17 0 0 1-2.085 2.632zm.196-2.154l-.358-1.834-.003-.003 2.086-1.537a6.681 6.681 0 0 1 .863 3.349zm-4.809-6.138l1.763 1.897-.005.007-1.572.741-.003-.003-1.628-1.875.005-.01 1.44-.757zM12 5.532a7.03 7.03 0 0 1 2.038.302l-.82 2.497h-.009l-1.066.099-.066.007-.994-.13-.007-.006-.82-2.498A7.03 7.03 0 0 1 12 5.532zM9.517 7.28l1.76-1.897 1.442.757.003.01-1.628 1.875-.003.003-1.572-.741-.002-.007zM5.29 15.63a6.672 6.672 0 0 1-.679-2.998c0-.072.007-.142.01-.214l2.565.025.003.008.359 1.842-2.258 1.337zm6.466 3.065a6.985 6.985 0 0 1-3.98-1.675l1.943-1.693.009.004 1.468.587.004.008.557 2.769zm.487.039l.557-2.769.004-.008 1.468-.587.009-.004 1.944 1.693a6.988 6.988 0 0 1-3.982 1.675zm5.383-3.51a6.674 6.674 0 0 1-.679 2.998l-2.257-1.337.358-1.842.003-.008 2.565-.025c.003.072.01.142.01.214zm-1.67-9.158a6.936 6.936 0 0 1 2.184 2.81l-2.082 1.53-.009-.005-1.412-.658-.005-.009.845-3.668zm-7.882 0l.479 3.668-.005.009-1.412.658-.009.005-2.082-1.53a6.936 6.936 0 0 1 2.184-2.81h.845zM12 4.538A7.974 7.974 0 1 0 12 20.486a7.974 7.974 0 0 0 0-15.948zm0-4.538C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Kubernetes</title>
+                <path
+                  d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005.485.606zm-.833-2.129l-2.588-.025a6.679 6.679 0 0 1 .863-3.349l2.086 1.537-.003.003-.358 1.834zm9.357 2.129l-.496-.615.003-.01 2.578.437a5.17 5.17 0 0 1-2.085 2.632zm.196-2.154l-.358-1.834-.003-.003 2.086-1.537a6.681 6.681 0 0 1 .863 3.349zm-4.809-6.138l1.763 1.897-.005.007-1.572.741-.003-.003-1.628-1.875.005-.01 1.44-.757zM12 5.532a7.03 7.03 0 0 1 2.038.302l-.82 2.497h-.009l-1.066.099-.066.007-.994-.13-.007-.006-.82-2.498A7.03 7.03 0 0 1 12 5.532zM9.517 7.28l1.76-1.897 1.442.757.003.01-1.628 1.875-.003.003-1.572-.741-.002-.007zM5.29 15.63a6.672 6.672 0 0 1-.679-2.998c0-.072.007-.142.01-.214l2.565.025.003.008.359 1.842-2.258 1.337zm6.466 3.065a6.985 6.985 0 0 1-3.98-1.675l1.943-1.693.009.004 1.468.587.004.008.557 2.769zm.487.039l.557-2.769.004-.008 1.468-.587.009-.004 1.944 1.693a6.988 6.988 0 0 1-3.982 1.675zm5.383-3.51a6.674 6.674 0 0 1-.679 2.998l-2.257-1.337.358-1.842.003-.008 2.565-.025c.003.072.01.142.01.214zm-1.67-9.158a6.936 6.936 0 0 1 2.184 2.81l-2.082 1.53-.009-.005-1.412-.658-.005-.009.845-3.668zm-7.882 0l.479 3.668-.005.009-1.412.658-.009.005-2.082-1.53a6.936 6.936 0 0 1 2.184-2.81h.845zM12 4.538A7.974 7.974 0 1 0 12 20.486a7.974 7.974 0 0 0 0-15.948zm0-4.538C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" />
+              </svg>
               <span>Kubernetes</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Amazon AWS</title><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.064.056.128.056.184 0 .08-.048.16-.152.24l-.504.336a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.232-.112a2.39 2.39 0 0 1-.28-.368 6.065 6.065 0 0 1-.24-.496 2.888 2.888 0 0 1-2.272 1.064c-.648 0-1.16-.184-1.528-.56-.368-.376-.552-.872-.552-1.504 0-.664.232-1.2.704-1.6.472-.4 1.1-.6 1.896-.6.264 0 .536.024.816.064.28.04.568.104.864.176v-.548c0-.568-.12-.968-.352-1.2-.24-.232-.648-.344-1.232-.344-.264 0-.536.032-.816.1-.28.068-.552.152-.816.264-.12.056-.208.088-.264.104a.508.508 0 0 1-.136.016c-.12 0-.176-.088-.176-.264v-.416c0-.136.016-.232.056-.296a.589.589 0 0 1 .224-.176c.264-.136.584-.248.952-.336a4.712 4.712 0 0 1 1.216-.144c.928 0 1.608.208 2.04.624.424.416.64 1.048.64 1.896v2.5zm-3.24 1.216c.256 0 .52-.048.8-.144.28-.096.528-.272.736-.512.12-.144.208-.304.256-.48.048-.176.08-.392.08-.648v-.312a6.507 6.507 0 0 0-.712-.064 6.03 6.03 0 0 0-.728-.024c-.52 0-.904.104-1.16.32-.256.208-.384.504-.384.896 0 .368.096.64.288.824.184.192.456.144.824.144zm6.24.888c-.152 0-.256-.024-.32-.08-.064-.048-.12-.16-.168-.312L7.48 6.848a1.419 1.419 0 0 1-.072-.32c0-.128.064-.2.192-.2h.784c.16 0 .264.024.32.08.064.048.112.16.16.312l1.288 5.072 1.192-5.072c.04-.16.088-.264.152-.312a.56.56 0 0 1 .336-.08h.64c.168 0 .272.024.336.08.064.048.12.16.152.312l1.208 5.136 1.32-5.136c.048-.16.104-.264.16-.312a.56.56 0 0 1 .32-.08h.744c.128 0 .2.064.2.2 0 .04-.008.08-.016.128a1.137 1.137 0 0 1-.056.2l-1.864 5.912c-.048.16-.104.264-.168.312a.52.52 0 0 1-.32.08h-.688a.474.474 0 0 1-.336-.08c-.064-.056-.12-.16-.152-.32l-1.184-4.96-1.184 4.952c-.04.16-.088.264-.152.32a.474.474 0 0 1-.336.08zm9.888.152c-.416 0-.832-.048-1.232-.144-.4-.096-.712-.2-.92-.32-.128-.072-.216-.152-.248-.224a.56.56 0 0 1-.048-.224v-.432c0-.176.064-.264.184-.264.048 0 .096.008.144.024.048.016.12.048.2.08.272.12.568.216.888.28.32.064.632.096.952.096.504 0 .896-.088 1.168-.264a.867.867 0 0 0 .408-.752.785.785 0 0 0-.216-.568c-.144-.152-.416-.288-.808-.416l-1.16-.36c-.584-.184-1.016-.456-1.284-.816a1.94 1.94 0 0 1-.408-1.192c0-.344.072-.648.216-.912.144-.264.336-.496.576-.688.24-.2.512-.344.832-.448a3.29 3.29 0 0 1 1.024-.152c.18 0 .364.008.54.032.184.024.352.056.512.096.152.032.296.072.432.12.136.048.24.096.312.144a.649.649 0 0 1 .216.184.415.415 0 0 1 .072.248v.4c0 .176-.064.272-.184.272a.83.83 0 0 1-.304-.096 3.652 3.652 0 0 0-1.536-.312c-.456 0-.816.072-1.072.224-.256.152-.384.384-.384.704 0 .224.08.416.24.568.16.152.456.304.88.44l1.136.36c.576.184.992.44 1.24.768.248.328.368.704.368 1.12 0 .352-.072.672-.208.952-.144.28-.336.52-.592.72-.256.192-.56.336-.92.432-.376.104-.768.152-1.192.152zM21.543 17.232c-2.624 1.936-6.44 2.96-9.72 2.96-4.6 0-8.743-1.696-11.876-4.52-.248-.224-.024-.528.272-.352 3.384 1.968 7.568 3.152 11.896 3.152 2.912 0 6.12-.608 9.072-1.856.44-.192.816.288.356.616zM22.552 16.08c-.336-.432-2.224-.208-3.072-.104-.256.032-.296-.192-.064-.36 1.504-1.056 3.976-.752 4.264-.4.288.36-.08 2.832-1.488 4.016-.216.184-.424.088-.328-.152.32-.8 1.032-2.576.688-3z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Amazon AWS</title>
+                <path
+                  d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.064.056.128.056.184 0 .08-.048.16-.152.24l-.504.336a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.232-.112a2.39 2.39 0 0 1-.28-.368 6.065 6.065 0 0 1-.24-.496 2.888 2.888 0 0 1-2.272 1.064c-.648 0-1.16-.184-1.528-.56-.368-.376-.552-.872-.552-1.504 0-.664.232-1.2.704-1.6.472-.4 1.1-.6 1.896-.6.264 0 .536.024.816.064.28.04.568.104.864.176v-.548c0-.568-.12-.968-.352-1.2-.24-.232-.648-.344-1.232-.344-.264 0-.536.032-.816.1-.28.068-.552.152-.816.264-.12.056-.208.088-.264.104a.508.508 0 0 1-.136.016c-.12 0-.176-.088-.176-.264v-.416c0-.136.016-.232.056-.296a.589.589 0 0 1 .224-.176c.264-.136.584-.248.952-.336a4.712 4.712 0 0 1 1.216-.144c.928 0 1.608.208 2.04.624.424.416.64 1.048.64 1.896v2.5zm-3.24 1.216c.256 0 .52-.048.8-.144.28-.096.528-.272.736-.512.12-.144.208-.304.256-.48.048-.176.08-.392.08-.648v-.312a6.507 6.507 0 0 0-.712-.064 6.03 6.03 0 0 0-.728-.024c-.52 0-.904.104-1.16.32-.256.208-.384.504-.384.896 0 .368.096.64.288.824.184.192.456.144.824.144zm6.24.888c-.152 0-.256-.024-.32-.08-.064-.048-.12-.16-.168-.312L7.48 6.848a1.419 1.419 0 0 1-.072-.32c0-.128.064-.2.192-.2h.784c.16 0 .264.024.32.08.064.048.112.16.16.312l1.288 5.072 1.192-5.072c.04-.16.088-.264.152-.312a.56.56 0 0 1 .336-.08h.64c.168 0 .272.024.336.08.064.048.12.16.152.312l1.208 5.136 1.32-5.136c.048-.16.104-.264.16-.312a.56.56 0 0 1 .32-.08h.744c.128 0 .2.064.2.2 0 .04-.008.08-.016.128a1.137 1.137 0 0 1-.056.2l-1.864 5.912c-.048.16-.104.264-.168.312a.52.52 0 0 1-.32.08h-.688a.474.474 0 0 1-.336-.08c-.064-.056-.12-.16-.152-.32l-1.184-4.96-1.184 4.952c-.04.16-.088.264-.152.32a.474.474 0 0 1-.336.08zm9.888.152c-.416 0-.832-.048-1.232-.144-.4-.096-.712-.2-.92-.32-.128-.072-.216-.152-.248-.224a.56.56 0 0 1-.048-.224v-.432c0-.176.064-.264.184-.264.048 0 .096.008.144.024.048.016.12.048.2.08.272.12.568.216.888.28.32.064.632.096.952.096.504 0 .896-.088 1.168-.264a.867.867 0 0 0 .408-.752.785.785 0 0 0-.216-.568c-.144-.152-.416-.288-.808-.416l-1.16-.36c-.584-.184-1.016-.456-1.284-.816a1.94 1.94 0 0 1-.408-1.192c0-.344.072-.648.216-.912.144-.264.336-.496.576-.688.24-.2.512-.344.832-.448a3.29 3.29 0 0 1 1.024-.152c.18 0 .364.008.54.032.184.024.352.056.512.096.152.032.296.072.432.12.136.048.24.096.312.144a.649.649 0 0 1 .216.184.415.415 0 0 1 .072.248v.4c0 .176-.064.272-.184.272a.83.83 0 0 1-.304-.096 3.652 3.652 0 0 0-1.536-.312c-.456 0-.816.072-1.072.224-.256.152-.384.384-.384.704 0 .224.08.416.24.568.16.152.456.304.88.44l1.136.36c.576.184.992.44 1.24.768.248.328.368.704.368 1.12 0 .352-.072.672-.208.952-.144.28-.336.52-.592.72-.256.192-.56.336-.92.432-.376.104-.768.152-1.192.152zM21.543 17.232c-2.624 1.936-6.44 2.96-9.72 2.96-4.6 0-8.743-1.696-11.876-4.52-.248-.224-.024-.528.272-.352 3.384 1.968 7.568 3.152 11.896 3.152 2.912 0 6.12-.608 9.072-1.856.44-.192.816.288.356.616zM22.552 16.08c-.336-.432-2.224-.208-3.072-.104-.256.032-.296-.192-.064-.36 1.504-1.056 3.976-.752 4.264-.4.288.36-.08 2.832-1.488 4.016-.216.184-.424.088-.328-.152.32-.8 1.032-2.576.688-3z" />
+              </svg>
               <span>AWS</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Apache Kafka</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.316 4.444a1.65 1.65 0 1 1 0 3.3 1.65 1.65 0 0 1 0-3.3zm-5.44 4.777a1.65 1.65 0 1 1 0 3.3 1.65 1.65 0 0 1 0-3.3zm10.881 0a1.65 1.65 0 1 1 0 3.3 1.65 1.65 0 0 1 0-3.3zm-5.44 4.778a1.65 1.65 0 1 1 0 3.299 1.65 1.65 0 0 1 0-3.3zm-1.088-3.893H10.8v1.524a3.29 3.29 0 0 0-1.566 1.05l-1.319-.762-.762 1.319 1.32.762a3.29 3.29 0 0 0 0 2.097l-1.32.762.762 1.319 1.32-.762a3.29 3.29 0 0 0 1.565 1.05v1.524h1.524v-1.524a3.29 3.29 0 0 0 1.566-1.05l1.319.762.762-1.319-1.32-.762a3.29 3.29 0 0 0 0-2.097l1.32-.762-.762-1.32-1.32.762a3.29 3.29 0 0 0-1.565-1.05V10.106zm1.087 2.607a.88.88 0 1 1 0 1.759.88.88 0 0 1 0-1.76z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Apache Kafka</title>
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.316 4.444a1.65 1.65 0 1 1 0 3.3 1.65 1.65 0 0 1 0-3.3zm-5.44 4.777a1.65 1.65 0 1 1 0 3.3 1.65 1.65 0 0 1 0-3.3zm10.881 0a1.65 1.65 0 1 1 0 3.3 1.65 1.65 0 0 1 0-3.3zm-5.44 4.778a1.65 1.65 0 1 1 0 3.299 1.65 1.65 0 0 1 0-3.3zm-1.088-3.893H10.8v1.524a3.29 3.29 0 0 0-1.566 1.05l-1.319-.762-.762 1.319 1.32.762a3.29 3.29 0 0 0 0 2.097l-1.32.762.762 1.319 1.32-.762a3.29 3.29 0 0 0 1.565 1.05v1.524h1.524v-1.524a3.29 3.29 0 0 0 1.566-1.05l1.319.762.762-1.319-1.32-.762a3.29 3.29 0 0 0 0-2.097l1.32-.762-.762-1.32-1.32.762a3.29 3.29 0 0 0-1.565-1.05V10.106zm1.087 2.607a.88.88 0 1 1 0 1.759.88.88 0 0 1 0-1.76z" />
+              </svg>
               <span>Kafka</span>
             </div>
           </div>
@@ -447,19 +903,39 @@
           <h4 class="skill-group-title" data-i18n="skills.db">Banco de Dados</h4>
           <div class="skills-grid">
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>PostgreSQL</title><path d="M17.128 0a10.134 10.134 0 0 0-2.755.403 7.316 7.316 0 0 0-2.119-1.013C10.874-.072 9.536.01 8.345.42c-.99.34-1.87.9-2.57 1.653a7.07 7.07 0 0 0-2.85 1.092C.071 4.867-.9 8.14.7 11.165a11.59 11.59 0 0 0 3.005 3.73c-.84 2.64-.225 4.73.36 5.912.422.854 1.296 2.344 2.974 2.344.48 0 1.048-.16 1.637-.604.69.436 1.527.574 2.34.574 1.05 0 2.085-.29 2.923-.967 1.686.363 3.105.056 4.024-.908.756-.798 1.047-1.913.91-3.117C22.255 16.25 24 13.34 24 10.5c0-2.268-.824-4.293-2.264-5.709-1.38-1.358-3.27-2.141-5.37-2.232-.417-.553-.912-1.009-1.238-1.559zm0 0"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>PostgreSQL</title>
+                <path
+                  d="M17.128 0a10.134 10.134 0 0 0-2.755.403 7.316 7.316 0 0 0-2.119-1.013C10.874-.072 9.536.01 8.345.42c-.99.34-1.87.9-2.57 1.653a7.07 7.07 0 0 0-2.85 1.092C.071 4.867-.9 8.14.7 11.165a11.59 11.59 0 0 0 3.005 3.73c-.84 2.64-.225 4.73.36 5.912.422.854 1.296 2.344 2.974 2.344.48 0 1.048-.16 1.637-.604.69.436 1.527.574 2.34.574 1.05 0 2.085-.29 2.923-.967 1.686.363 3.105.056 4.024-.908.756-.798 1.047-1.913.91-3.117C22.255 16.25 24 13.34 24 10.5c0-2.268-.824-4.293-2.264-5.709-1.38-1.358-3.27-2.141-5.37-2.232-.417-.553-.912-1.009-1.238-1.559zm0 0" />
+              </svg>
               <span>PostgreSQL</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>MySQL</title><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.19.213.3.054.104.146.19.213.3l.015-.016a.88.88 0 0 0-.181-.627zm-2.918 1.208l-.014-.012-.013.012.013.012.014-.012zM23.914 0h-8.813v.09c1.095.038 1.978.347 2.629.975.652.63.974 1.483.974 2.56 0 1.13-.343 2.007-1.027 2.631-.685.624-1.617.933-2.796.933-.134 0-.264-.006-.394-.018l-2.617 2.617A10.12 10.12 0 0 0 12 9.5c-2.485 0-4.87.93-6.682 2.601L5.3 12.12a.965.965 0 0 0-.245.672v.24a.96.96 0 0 0 .168.55l.01.014a.96.96 0 0 0 .786.404h.228c.218 0 .435-.028.645-.083a9.038 9.038 0 0 1 5.11-.225l.012-.01.033-.032a1.42 1.42 0 0 0 .21-.252l.012-.018.004-.007.003-.005.001-.002.001-.001a1.358 1.358 0 0 0 .116-.315l.003-.01.003-.01.003-.011.003-.01.002-.01V13.1a1.44 1.44 0 0 0-.004-.095l-.002-.01-.002-.01A1.37 1.37 0 0 0 12 12.5c-.746 0-1.35.604-1.35 1.35s.604 1.35 1.35 1.35c.746 0 1.35-.604 1.35-1.35v-.05a9.069 9.069 0 0 1 2.74 1.034c.36.211.706.453 1.034.722l.016.013a9.03 9.03 0 0 1 2.895 6.431c0 .02-.001.04-.001.06a.961.961 0 0 0 .963.963.96.96 0 0 0 .963-.963c0-3.067-1.461-5.79-3.73-7.518l2.48-2.48H23.914v-12zM12 13.852a.352.352 0 1 1 0-.704.352.352 0 0 1 0 .704z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>MySQL</title>
+                <path
+                  d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.19.213.3.054.104.146.19.213.3l.015-.016a.88.88 0 0 0-.181-.627zm-2.918 1.208l-.014-.012-.013.012.013.012.014-.012zM23.914 0h-8.813v.09c1.095.038 1.978.347 2.629.975.652.63.974 1.483.974 2.56 0 1.13-.343 2.007-1.027 2.631-.685.624-1.617.933-2.796.933-.134 0-.264-.006-.394-.018l-2.617 2.617A10.12 10.12 0 0 0 12 9.5c-2.485 0-4.87.93-6.682 2.601L5.3 12.12a.965.965 0 0 0-.245.672v.24a.96.96 0 0 0 .168.55l.01.014a.96.96 0 0 0 .786.404h.228c.218 0 .435-.028.645-.083a9.038 9.038 0 0 1 5.11-.225l.012-.01.033-.032a1.42 1.42 0 0 0 .21-.252l.012-.018.004-.007.003-.005.001-.002.001-.001a1.358 1.358 0 0 0 .116-.315l.003-.01.003-.01.003-.011.003-.01.002-.01V13.1a1.44 1.44 0 0 0-.004-.095l-.002-.01-.002-.01A1.37 1.37 0 0 0 12 12.5c-.746 0-1.35.604-1.35 1.35s.604 1.35 1.35 1.35c.746 0 1.35-.604 1.35-1.35v-.05a9.069 9.069 0 0 1 2.74 1.034c.36.211.706.453 1.034.722l.016.013a9.03 9.03 0 0 1 2.895 6.431c0 .02-.001.04-.001.06a.961.961 0 0 0 .963.963.96.96 0 0 0 .963-.963c0-3.067-1.461-5.79-3.73-7.518l2.48-2.48H23.914v-12zM12 13.852a.352.352 0 1 1 0-.704.352.352 0 0 1 0 .704z" />
+              </svg>
               <span>MySQL</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Redis</title><path d="M10.9 17.626c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118L10.9 13.32l10.354 4.306c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118zM.578 14.807L0 14.512V9.458l10.9 5.418 10.9-5.418v5.054l-.578.295c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118H9.868C8.383 15.573 6.21 15.926 4.19 15.926c-2.02 0-4.192-.354-5.677-1.118 0 0 .065-.001.065-.001zm0-5.416L0 9.096V4.04l10.9 5.418 10.9-5.418v5.057l-.578.295c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118H9.868C8.383 10.157 6.21 10.51 4.19 10.51c-2.02 0-4.192-.354-5.677-1.118 0 0 .065-.001.065-.001zm10.322-9.14l10.9 5.418-10.9 5.418L0 5.669l10.9-5.418z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Redis</title>
+                <path
+                  d="M10.9 17.626c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118L10.9 13.32l10.354 4.306c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118zM.578 14.807L0 14.512V9.458l10.9 5.418 10.9-5.418v5.054l-.578.295c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118H9.868C8.383 15.573 6.21 15.926 4.19 15.926c-2.02 0-4.192-.354-5.677-1.118 0 0 .065-.001.065-.001zm0-5.416L0 9.096V4.04l10.9 5.418 10.9-5.418v5.057l-.578.295c-1.485.764-3.657 1.118-5.677 1.118-2.02 0-4.192-.354-5.677-1.118H9.868C8.383 10.157 6.21 10.51 4.19 10.51c-2.02 0-4.192-.354-5.677-1.118 0 0 .065-.001.065-.001zm10.322-9.14l10.9 5.418-10.9 5.418L0 5.669l10.9-5.418z" />
+              </svg>
               <span>Redis</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Hibernate</title><path d="M5.375 0C2.41 0 0 2.41 0 5.375v13.25C0 21.59 2.41 24 5.375 24h13.25C21.59 24 24 21.59 24 18.625V5.375C24 2.41 21.59 0 18.625 0H5.375zm3.51 5.52l1.808 3.04 2.065-3.04h2.04l-3.158 4.508 3.285 5.46h-2.056l-1.938-3.286-2.217 3.285H6.66l3.284-4.875-3.13-5.093h2.072z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Hibernate</title>
+                <path
+                  d="M5.375 0C2.41 0 0 2.41 0 5.375v13.25C0 21.59 2.41 24 5.375 24h13.25C21.59 24 24 21.59 24 18.625V5.375C24 2.41 21.59 0 18.625 0H5.375zm3.51 5.52l1.808 3.04 2.065-3.04h2.04l-3.158 4.508 3.285 5.46h-2.056l-1.938-3.286-2.217 3.285H6.66l3.284-4.875-3.13-5.093h2.072z" />
+              </svg>
               <span>JPA/Hibernate</span>
             </div>
           </div>
@@ -470,19 +946,39 @@
           <h4 class="skill-group-title" data-i18n="skills.tools">Ferramentas</h4>
           <div class="skills-grid">
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Git</title><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Git</title>
+                <path
+                  d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+              </svg>
               <span>Git</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Keycloak</title><path d="M14.476 0H9.53L7.2 3.97l2.33 3.97h4.946l2.33-3.97zm-4.946 8.062L7.2 12.03l2.33 3.97h4.946l2.33-3.97-2.33-3.967zm0 8.062L6.42 22.53 7.98 24h8.04l1.56-1.47-3.11-6.406zM0 12.03l2.33 3.97H7.2l2.33-3.97-2.33-3.968H2.33zm7.2-8.06H2.33L0 7.938l2.33 3.97h4.87l2.33-3.97z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Keycloak</title>
+                <path
+                  d="M14.476 0H9.53L7.2 3.97l2.33 3.97h4.946l2.33-3.97zm-4.946 8.062L7.2 12.03l2.33 3.97h4.946l2.33-3.97-2.33-3.967zm0 8.062L6.42 22.53 7.98 24h8.04l1.56-1.47-3.11-6.406zM0 12.03l2.33 3.97H7.2l2.33-3.97-2.33-3.968H2.33zm7.2-8.06H2.33L0 7.938l2.33 3.97h4.87l2.33-3.97z" />
+              </svg>
               <span>Keycloak</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>PyTorch</title><path d="M12.005 0L4.952 7.053a9.865 9.865 0 0 0 0 14.022 9.866 9.866 0 0 0 14.022 0 9.865 9.865 0 0 0 0-14.022L16.18 9.847a5.23 5.23 0 0 1 0 7.434 5.231 5.231 0 0 1-7.435 0 5.232 5.232 0 0 1 0-7.434zM15.08 3.296a1.647 1.647 0 1 1-1.647 1.647 1.647 1.647 0 0 1 1.647-1.647z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>PyTorch</title>
+                <path
+                  d="M12.005 0L4.952 7.053a9.865 9.865 0 0 0 0 14.022 9.866 9.866 0 0 0 14.022 0 9.865 9.865 0 0 0 0-14.022L16.18 9.847a5.23 5.23 0 0 1 0 7.434 5.231 5.231 0 0 1-7.435 0 5.232 5.232 0 0 1 0-7.434zM15.08 3.296a1.647 1.647 0 1 1-1.647 1.647 1.647 1.647 0 0 1 1.647-1.647z" />
+              </svg>
               <span>PyTorch</span>
             </div>
             <div class="skill-item">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36"><title>Prisma</title><path d="M21.807 18.285L13.553.756a1.756 1.756 0 0 0-1.558-1A1.756 1.756 0 0 0 10.43.75l-8.24 17.53a1.757 1.757 0 0 0 1.558 2.514h16.5a1.756 1.756 0 0 0 1.559-2.51zm-1.559.753H3.748a.256.256 0 0 1-.215-.375l8.247-17.53a.271.271 0 0 1 .218-.127.252.252 0 0 1 .218.13l8.244 17.527a.253.253 0 0 1-.212.375zm-5.708-3.77l-3.035-6.126a1.192 1.192 0 0 0-2.128 0l-3.035 6.127a1.192 1.192 0 0 0 1.064 1.717h6.07a1.192 1.192 0 0 0 1.064-1.717z"/></svg>
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36"
+                height="36">
+                <title>Prisma</title>
+                <path
+                  d="M21.807 18.285L13.553.756a1.756 1.756 0 0 0-1.558-1A1.756 1.756 0 0 0 10.43.75l-8.24 17.53a1.757 1.757 0 0 0 1.558 2.514h16.5a1.756 1.756 0 0 0 1.559-2.51zm-1.559.753H3.748a.256.256 0 0 1-.215-.375l8.247-17.53a.271.271 0 0 1 .218-.127.252.252 0 0 1 .218.13l8.244 17.527a.253.253 0 0 1-.212.375zm-5.708-3.77l-3.035-6.126a1.192 1.192 0 0 0-2.128 0l-3.035 6.127a1.192 1.192 0 0 0 1.064 1.717h6.07a1.192 1.192 0 0 0 1.064-1.717z" />
+              </svg>
               <span>Prisma ORM</span>
             </div>
           </div>
@@ -494,20 +990,45 @@
           <p class="section-pretitle" data-i18n="contact.pretitle">O que vem a seguir?</p>
           <h2 class="contact-title" data-i18n="contact.title">Entre em Contato</h2>
           <p class="contact-text" data-i18n="contact.desc">
-            No momento, estou aberto a novas oportunidades de desenvolvimento e colaboração. 
+            No momento, estou aberto a novas oportunidades de desenvolvimento e colaboração.
             Seja para tirar dúvidas, propor projetos ou simplesmente dizer olá, farei o possível para retornar em breve!
           </p>
-          <a href="mailto:asb3@cin.ufpe.br" class="btn btn-primary contact-btn" data-i18n="contact.btn">Diga Olá</a>
+          <div class="contact-social-cue" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14" />
+              <path d="m18 13-6 6-6-6" />
+            </svg>
+          </div>
         </div>
       </section>
 
       <footer class="footer">
         <div class="footer-links fade-up">
           <a href="https://github.com/alissonjcjk" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
           </a>
-          <a href="https://linkedin.com/in/alisson-da-silva-bernadino-6535b3318" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://linkedin.com/in/alisson-da-silva-bernadino-6535b3318" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5581999903818" target="_blank" rel="noopener noreferrer"
+            aria-label="Conversar pelo WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z" />
+              <path d="M9 8.5c.5 2 2 3.5 4 4l1-1 2 .5v2c0 .55-.45 1-1 1A7 7 0 0 1 8 8c0-.55.45-1 1-1h2l.5 2-1 1" />
+            </svg>
           </a>
         </div>
         <p class="footer-text fade-up" data-i18n="footer.text">Desenvolvido por Alisson Bernardino &copy; 2026</p>
@@ -522,4 +1043,5 @@
   <script src="./js/animations.js" defer></script>
   <script src="./js/tabs.js" defer></script>
 </body>
+
 </html>

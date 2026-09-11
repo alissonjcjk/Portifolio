@@ -1,8 +1,8 @@
 :root {
   /* Colors - Light Theme (Default Minimalist) */
-  --bg-primary: #F8F6F1; /* Off-white */
-  --bg-secondary: #FFFFFF;
-  --bg-tertiary: #F0EFE9;
+  --bg-primary: transparent;                   /* revela o background de triângulos SVG */
+  --bg-secondary: rgba(255, 255, 255, 0.80);   /* branco semi-transparente para cards */
+  --bg-tertiary: rgba(240, 239, 233, 0.85);    /* off-white semi-transparente */
   
   --text-primary: #0D0D0D;
   --text-secondary: #4A4A4A;
@@ -90,9 +90,9 @@
 /* Ativa por OS preference (sem override manual) OU por data-theme="dark" */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg-primary: #0A0A0A;
-    --bg-secondary: #141414;
-    --bg-tertiary: #1F1F1F;
+    --bg-primary: transparent;           /* revela o background de triângulos SVG */
+    --bg-secondary: rgba(14, 10, 28, 0.75);  /* roxo-escuro semi-transparente */
+    --bg-tertiary: rgba(20, 16, 38, 0.85);   /* roxo-escuro mais opaco para cards */
 
     --text-primary: #F2F2F2;
     --text-secondary: #A3A3A3;
@@ -107,9 +107,9 @@
 }
 
 :root[data-theme="dark"] {
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #141414;
-  --bg-tertiary: #1F1F1F;
+  --bg-primary: transparent;           /* revela o background de triângulos SVG */
+  --bg-secondary: rgba(14, 10, 28, 0.75);  /* roxo-escuro semi-transparente */
+  --bg-tertiary: rgba(20, 16, 38, 0.85);   /* roxo-escuro mais opaco para cards */
 
   --text-primary: #F2F2F2;
   --text-secondary: #A3A3A3;
