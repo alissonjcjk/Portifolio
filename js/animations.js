@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const typewriterTexts = {
     pt: [
-      "próxima geração da Web.",
       "solução do seu problema.",
       "experiência perfeita."
     ],
     en: [
-      "next generation of the Web.",
       "solution to your problem.",
       "perfect experience."
     ]
