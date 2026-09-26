@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const typewriterTexts = {
     pt: [
-      "solução do seu problema.",
-      "experiência perfeita."
+      "Dev FullStack",
+      "Engenheiro de IA"
     ],
     en: [
-      "solution to your problem.",
-      "perfect experience."
+      "FullStack Dev.",
+      "AI Enginier"
     ]
   };
 
@@ -215,5 +215,90 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     updateThemeIcon(currentTheme);
   });
+
+  // --- Matrix Rain Effect (ao redor da foto) ---
+  (function initMatrixRain() {
+    const canvas = document.getElementById('matrix-canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const CHARS = '01';
+    const FONT_SIZE = 11;
+    let cols, drops, rafId;
+
+    function resize() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.floor(rect.width / FONT_SIZE);
+      drops = Array.from({ length: cols }, () => Math.random() * -(rect.height / FONT_SIZE));
+    }
+
+    function getMatrixColor() {
+      // Adapta a cor ao tema atual
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      return theme === 'dark' ? '#00ff41' : '#4f46e5';
+    }
+
+    function draw() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const color = getMatrixColor();
+
+      // Limpa o canvas a cada frame (fundo transparente)
+      ctx.clearRect(0, 0, rect.width, rect.height);
+
+      ctx.font = `${FONT_SIZE}px monospace`;
+
+      for (let i = 0; i < cols; i++) {
+        // Apenas ~30% das colunas activas em cada frame — efeito discreto
+        if (Math.random() > 0.30) continue;
+
+        const char = CHARS[Math.floor(Math.random() * CHARS.length)];
+        const x = i * FONT_SIZE;
+        const y = drops[i] * FONT_SIZE;
+
+        if (y < 0) {
+          drops[i] += 0.5;
+          continue;
+        }
+
+        // Cabeça da gota: ligeiramente mais brilhante
+        const isHead = Math.random() > 0.88;
+        ctx.fillStyle = isHead ? '#ffffff' : color;
+        ctx.globalAlpha = isHead ? 0.75 : (Math.random() * 0.35 + 0.12);
+        ctx.fillText(char, x, y);
+        ctx.globalAlpha = 1;
+
+        // Reset da gota ao sair do canvas
+        if (y > rect.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i] += 0.5;
+      }
+
+      rafId = requestAnimationFrame(draw);
+    }
+
+    // Limpa o canvas ao trocar de tema
+    function clearCanvas() {
+      if (!canvas) return;
+      const rect = canvas.parentElement.getBoundingClientRect();
+      ctx.clearRect(0, 0, rect.width, rect.height);
+    }
+
+    window.addEventListener('resize', () => {
+      clearCanvas();
+      resize();
+    });
+
+    document.documentElement.addEventListener
+      && new MutationObserver(() => clearCanvas())
+        .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    resize();
+    draw();
+  })();
 
 });

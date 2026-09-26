@@ -149,7 +149,8 @@
 #skills,
 #contact {
   content-visibility: auto;
-  contain-intrinsic-size: 0 600px; /* estimativa conservadora da altura */
+  contain-intrinsic-size: 0 600px;
+  /* estimativa conservadora da altura */
 }
 
 /*
@@ -229,11 +230,13 @@
   display: flex;
   overflow-x: auto;
   border-bottom: 1px solid var(--border-color);
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .experience-tabs::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+  /* Chrome, Safari */
 }
 
 .tab-button {
@@ -322,21 +325,21 @@
   .experience-container {
     flex-direction: row;
   }
-  
+
   .experience-tabs {
     flex-direction: column;
     border-bottom: none;
     border-left: 1px solid var(--border-color);
     min-width: max-content;
   }
-  
+
   .tab-button {
     padding: var(--space-3) var(--space-6);
     text-align: left;
     border-left: 2px solid transparent;
     margin-left: -1px;
   }
-  
+
   .tab-highlight {
     width: 2px;
     height: 0;
@@ -528,12 +531,17 @@
   scroll-margin-top: var(--space-20);
 }
 
-.project-category + .project-category {
+.project-category+.project-category {
   margin-top: var(--space-16);
 }
 
-.project-category--ai { --category-accent: #8b5cf6; }
-.project-category--azure { --category-accent: #0078d4; }
+.project-category--ai {
+  --category-accent: #8b5cf6;
+}
+
+.project-category--azure {
+  --category-accent: #0078d4;
+}
 
 .project-category-header {
   display: grid;
@@ -574,7 +582,7 @@
   font-size: var(--text-2xl);
 }
 
-.project-category-header div > p:last-child {
+.project-category-header div>p:last-child {
   max-width: 660px;
   margin: 0;
   line-height: var(--leading-relaxed);
@@ -935,8 +943,17 @@
 }
 
 @keyframes social-cue-bounce {
-  0%, 100% { transform: translateY(0); opacity: 0.7; }
-  50% { transform: translateY(9px); opacity: 1; }
+
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(9px);
+    opacity: 1;
+  }
 }
 
 .contact-btn {
@@ -1086,13 +1103,23 @@ button:focus-visible {
 
 /* --- Print Styles --- */
 @media print {
-  .sidebar, #scroll-progress, .theme-toggle-btn, .lang-toggle-btn { display: none !important; }
-  .main-content { overflow: visible !important; }
+
+  .sidebar,
+  #scroll-progress,
+  .theme-toggle-btn,
+  .lang-toggle-btn {
+    display: none !important;
+  }
+
+  .main-content {
+    overflow: visible !important;
+  }
 }
 
 /* --- Mobile Navigation Bar (visível apenas em mobile onde .nav-menu é oculto) --- */
 .mobile-nav {
-  display: none; /* Oculto por padrão — sobrescrito pelo breakpoint abaixo */
+  display: none;
+  /* Oculto por padrão — sobrescrito pelo breakpoint abaixo */
 }
 
 @media (max-width: 1023px) {
