@@ -19,15 +19,38 @@
 }
 
 /* Sidebar Content Styles */
+
+/* Matrix Photo Container — quadrado com canvas ao redor da foto */
+.matrix-photo-container {
+  position: relative;
+  width: clamp(160px, 18vw, 220px);
+  aspect-ratio: 1;
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#matrix-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 0;
+  background: transparent;
+}
+
 .profile-photo-wrap {
   position: relative;
   width: clamp(96px, 10vw, 132px);
   aspect-ratio: 1;
-  margin-bottom: var(--space-6);
   padding: 4px;
   border-radius: var(--radius-full);
   background: linear-gradient(135deg, var(--accent-secondary), #a78bfa 58%, var(--accent-tertiary));
   box-shadow: 0 12px 70px -24px rgba(79, 70, 229, 0.42);
+  z-index: 1;
 }
 
 .profile-photo-wrap::after {
@@ -158,10 +181,10 @@
   scroll-margin-top: var(--space-8);
 }
 
-/* Hero subtitle: altura reservada para a frase mais longa
-   evita layout shift quando frases menores aparecem */
+/* Hero subtitle: altura reservada para a frase
+   evita layout shift quando aparecem os textos animados */
 .hero-subtitle {
-  min-height: clamp(3.8rem, 8vw + 2rem, 8rem);
+  min-height: 2.5rem;
   align-items: flex-start;
 }
 
@@ -197,9 +220,9 @@
     display: block; /* Show on desktop */
   }
 
-  /* No desktop a fonte é maior, frases longas podem quebrar em 2-3 linhas */
+  /* No desktop a fonte é maior */
   .hero-subtitle {
-    min-height: clamp(6rem, 12vw + 2rem, 14rem);
+    min-height: 3.5rem;
   }
 }
 
